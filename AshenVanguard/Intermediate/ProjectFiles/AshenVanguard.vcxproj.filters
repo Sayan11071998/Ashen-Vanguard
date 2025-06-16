@@ -11,6 +11,7 @@
     <None Include="..\..\Source\AshenVanguardEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <None Include="..\..\AshenVanguard.png" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
@@ -48,11 +49,35 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Throwaway.cpp">
       <Filter>Source\AshenVanguard\Private</Filter>
     </ClCompile>
+    <Filter Include="Source\AshenVanguard\Private\Animations">
+      <UniqueIdentifier>{83EFA15F-3651-3594-B54E-C54BF2965406}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\PlayerAnimInstance.cpp">
+      <Filter>Source\AshenVanguard\Private\Animations</Filter>
+    </ClCompile>
+    <Filter Include="Source\AshenVanguard\Private\Characters">
+      <UniqueIdentifier>{218252FF-6BF7-3E4C-9E2C-C8DD9C48F381}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\MainCharacter.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters</Filter>
+    </ClCompile>
     <Filter Include="Source\AshenVanguard\Public">
       <UniqueIdentifier>{BCCABDBE-07FE-396D-A6E1-5AF5D852CAD3}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Throwaway.h">
       <Filter>Source\AshenVanguard\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\AshenVanguard\Public\Animations">
+      <UniqueIdentifier>{BBB19684-CC73-3878-B17A-8E0FD7EF4300}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\PlayerAnimInstance.h">
+      <Filter>Source\AshenVanguard\Public\Animations</Filter>
+    </ClInclude>
+    <Filter Include="Source\AshenVanguard\Public\Characters">
+      <UniqueIdentifier>{6EEA0EDE-4A0B-3F3F-B29F-E371E1703BA8}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\MainCharacter.h">
+      <Filter>Source\AshenVanguard\Public\Characters</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
