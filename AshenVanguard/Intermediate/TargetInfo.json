@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "AshenVanguard",
+			"Path": "..\\Source\\AshenVanguard.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "AshenVanguardEditor",
+			"Path": "..\\Source\\AshenVanguardEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
