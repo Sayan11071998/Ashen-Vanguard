@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\AshenVanguard.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\AshenVanguard.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\AshenVanguardEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\AshenVanguard.png" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\AshenVanguard">
+      <UniqueIdentifier>{881E2D27-D2C8-3BD7-B6E9-5671D656E142}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\AshenVanguard\AshenVanguard.Build.cs">
+      <Filter>Source\AshenVanguard</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\AshenVanguard\AshenVanguard.cpp">
+      <Filter>Source\AshenVanguard</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AshenVanguard\AshenVanguard.h">
+      <Filter>Source\AshenVanguard</Filter>
+    </ClInclude>
+    <Filter Include="Source\AshenVanguard\Private">
+      <UniqueIdentifier>{32B53369-75B9-3911-B800-EF7791E281D6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Throwaway.cpp">
+      <Filter>Source\AshenVanguard\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\AshenVanguard\Public">
+      <UniqueIdentifier>{BCCABDBE-07FE-396D-A6E1-5AF5D852CAD3}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Throwaway.h">
+      <Filter>Source\AshenVanguard\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
