@@ -1,0 +1,14 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Content/Characters/BP_Boss.uasset",
+				"C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/C/BA/NVHK66H2C9P0KQRXHBZJSL.uasset"
+			]
+		}
+	]
+}
