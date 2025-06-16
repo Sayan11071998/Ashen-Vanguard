@@ -7,7 +7,9 @@
 			"files": [
 				"C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
 				"C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Content/Characters/BP_Boss.uasset",
-				"C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/C/BA/NVHK66H2C9P0KQRXHBZJSL.uasset"
+				"C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/C/BA/NVHK66H2C9P0KQRXHBZJSL.uasset",
+				"C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Content/Animations/ABP_Player.uasset",
+				"C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Content/Animations/ABP_Boss.uasset"
 			]
 		}
 	]
