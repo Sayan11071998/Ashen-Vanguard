@@ -11,7 +11,7 @@ class ASHENVANGUARD_API UPlayerAnimInstance : public UAnimInstance
 
 protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	float CurrentVelocity{ 0.0f };
+	float CurrentSpeed{ 0.0f };
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	bool bIsInCombat{ false };
@@ -20,7 +20,7 @@ protected:
 	float CurrentDirection{ 0.0f };
 
 	UFUNCTION(BlueprintCallable)
-	void UpdateVelocity();
+	void UpdateSpeed();
 
 public:
 	UFUNCTION(BlueprintCallable)
