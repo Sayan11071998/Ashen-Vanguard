@@ -58,6 +58,9 @@
     <Filter Include="Source\AshenVanguard\Private\Characters">
       <UniqueIdentifier>{218252FF-6BF7-3E4C-9E2C-C8DD9C48F381}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\BossCharacter.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\MainCharacter.cpp">
       <Filter>Source\AshenVanguard\Private\Characters</Filter>
     </ClCompile>
@@ -82,6 +85,15 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\TraceComponent.cpp">
       <Filter>Source\AshenVanguard\Private\Combat</Filter>
     </ClCompile>
+    <Filter Include="Source\AshenVanguard\Private\Interfaces">
+      <UniqueIdentifier>{F4DE3E52-7C35-3F4A-B94C-0684F4BB9D1D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Interfaces\Enemy.cpp">
+      <Filter>Source\AshenVanguard\Private\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Interfaces\MainPlayer.cpp">
+      <Filter>Source\AshenVanguard\Private\Interfaces</Filter>
+    </ClCompile>
     <Filter Include="Source\AshenVanguard\Public">
       <UniqueIdentifier>{BCCABDBE-07FE-396D-A6E1-5AF5D852CAD3}</UniqueIdentifier>
     </Filter>
@@ -97,6 +109,9 @@
     <Filter Include="Source\AshenVanguard\Public\Characters">
       <UniqueIdentifier>{6EEA0EDE-4A0B-3F3F-B29F-E371E1703BA8}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\BossCharacter.h">
+      <Filter>Source\AshenVanguard\Public\Characters</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\MainCharacter.h">
       <Filter>Source\AshenVanguard\Public\Characters</Filter>
     </ClInclude>
@@ -120,6 +135,15 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\TraceComponent.h">
       <Filter>Source\AshenVanguard\Public\Combat</Filter>
+    </ClInclude>
+    <Filter Include="Source\AshenVanguard\Public\Interfaces">
+      <UniqueIdentifier>{D6D80A3C-CF36-3835-A9E9-F80522192B94}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Interfaces\Enemy.h">
+      <Filter>Source\AshenVanguard\Public\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Interfaces\MainPlayer.h">
+      <Filter>Source\AshenVanguard\Public\Interfaces</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

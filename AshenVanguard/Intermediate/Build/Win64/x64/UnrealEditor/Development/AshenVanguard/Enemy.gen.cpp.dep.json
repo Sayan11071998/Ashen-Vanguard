@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\enemy.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\x64\\ashenvanguardeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderoldest.h.pch",
+        "Includes": [
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ashenvanguard\\definitions.ashenvanguard.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\interfaces\\enemy.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\enemy.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

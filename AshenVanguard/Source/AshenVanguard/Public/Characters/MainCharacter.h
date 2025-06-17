@@ -2,10 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Interfaces/MainPlayer.h"
 #include "MainCharacter.generated.h"
 
 UCLASS()
-class ASHENVANGUARD_API AMainCharacter : public ACharacter
+class ASHENVANGUARD_API AMainCharacter : public ACharacter, public IMainPlayer
 {
 	GENERATED_BODY()
 

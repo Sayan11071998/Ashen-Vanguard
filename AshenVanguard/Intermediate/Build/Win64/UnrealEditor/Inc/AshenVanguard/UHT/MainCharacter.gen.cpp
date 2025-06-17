@@ -12,6 +12,7 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 // Begin Cross Module References
 ASHENVANGUARD_API UClass* Z_Construct_UClass_AMainCharacter();
 ASHENVANGUARD_API UClass* Z_Construct_UClass_AMainCharacter_NoRegister();
+ASHENVANGUARD_API UClass* Z_Construct_UClass_UMainPlayer_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
@@ -35,6 +36,7 @@ struct Z_Construct_UClass_AMainCharacter_Statics
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
+	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMainCharacter>::IsAbstract,
 	};
@@ -45,6 +47,9 @@ UObject* (*const Z_Construct_UClass_AMainCharacter_Statics::DependentSingletons[
 	(UObject* (*)())Z_Construct_UPackage__Script_AshenVanguard,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AMainCharacter_Statics::InterfaceParams[] = {
+	{ Z_Construct_UClass_UMainPlayer_NoRegister, (int32)VTABLE_OFFSET(AMainCharacter, IMainPlayer), false },  // 171537006
+};
 const UECodeGen_Private::FClassParams Z_Construct_UClass_AMainCharacter_Statics::ClassParams = {
 	&AMainCharacter::StaticClass,
 	"Game",
@@ -52,11 +57,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AMainCharacter_Statics:
 	DependentSingletons,
 	nullptr,
 	nullptr,
-	nullptr,
+	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
 	0,
-	0,
+	UE_ARRAY_COUNT(InterfaceParams),
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::Class_MetaDataParams), Z_Construct_UClass_AMainCharacter_Statics::Class_MetaDataParams)
 };
@@ -80,10 +85,10 @@ AMainCharacter::~AMainCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 3171531188U) },
+		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 593054007U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_2113203450(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_4070878327(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

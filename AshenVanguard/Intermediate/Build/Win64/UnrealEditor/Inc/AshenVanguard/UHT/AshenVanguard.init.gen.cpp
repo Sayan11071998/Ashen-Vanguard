@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeAshenVanguard_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x716E5535,
-				0xD2A82BC7,
+				0x827E0E82,
+				0x96653E11,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_AshenVanguard.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_AshenVanguard.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AshenVanguard(Z_Construct_UPackage__Script_AshenVanguard, TEXT("/Script/AshenVanguard"), Z_Registration_Info_UPackage__Script_AshenVanguard, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x716E5535, 0xD2A82BC7));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AshenVanguard(Z_Construct_UPackage__Script_AshenVanguard, TEXT("/Script/AshenVanguard"), Z_Registration_Info_UPackage__Script_AshenVanguard, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x827E0E82, 0x96653E11));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
