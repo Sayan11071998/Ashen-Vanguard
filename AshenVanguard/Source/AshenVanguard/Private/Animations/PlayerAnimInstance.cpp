@@ -1,6 +1,6 @@
 #include "Animations/PlayerAnimInstance.h"
 
-void UPlayerAnimInstance::UpdateVelocity()
+void UPlayerAnimInstance::UpdateSpeed()
 {
 	APawn* PawnRef{ TryGetPawnOwner() };
 
@@ -8,5 +8,24 @@ void UPlayerAnimInstance::UpdateVelocity()
 
 	FVector Velocity{ PawnRef->GetVelocity()};
 
-	CurrentVelocity = static_cast<float>(Velocity.Length());
+	CurrentSpeed = static_cast<float>(Velocity.Length());
+}
+
+void UPlayerAnimInstance::HandleUpdatedTarget(AActor* NewTargetActorRef)
+{
+	bIsInCombat = IsValid(NewTargetActorRef);
+}
+
+void UPlayerAnimInstance::UpdateDirection()
+{
+	APawn* PawnRef{ TryGetPawnOwner() };
+
+	if (!IsValid(PawnRef)) { return; }
+
+	if (!bIsInCombat) { return; }
+
+	CurrentDirection = CalculateDirection(
+		PawnRef->GetVelocity(),
+		PawnRef->GetActorRotation()
+	);
 }
