@@ -9,8 +9,14 @@ class ASHENVANGUARD_API ULockonComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
+	ACharacter* OwnerRef;
+	APlayerController* Controller;
+	class UCharacterMovementComponent* MovementComp;
+
 public:
 	ULockonComponent();
+
+	AActor* CurrentTargetActor;
 
 protected:
 	virtual void BeginPlay() override;

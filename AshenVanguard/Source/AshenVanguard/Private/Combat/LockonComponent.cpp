@@ -1,4 +1,7 @@
 #include "Combat/LockonComponent.h"
+#include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "Kismet/KismetMathLibrary.h"
 
 ULockonComponent::ULockonComponent()
 {
@@ -8,22 +11,37 @@ ULockonComponent::ULockonComponent()
 void ULockonComponent::BeginPlay()
 {
 	Super::BeginPlay();
+
+	OwnerRef = GetOwner<ACharacter>();
+	Controller = GetWorld()->GetFirstPlayerController();
+	MovementComp = OwnerRef->GetCharacterMovement();
 }
 
 void ULockonComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	if (!IsValid(CurrentTargetActor)) { return; }
+
+	FVector CurrentLocation{ OwnerRef->GetActorLocation() };
+	FVector TargetLocation{ CurrentTargetActor->GetActorLocation() };
+
+	FRotator NewRotation{ UKismetMathLibrary::FindLookAtRotation(
+		CurrentLocation, TargetLocation
+	) };
+
+	Controller->SetControlRotation(NewRotation);
 }
 
 void ULockonComponent::StartLockon(float Radius)
 {
 	FHitResult OutResult;
-	FVector CurrentLocation{ GetOwner()->GetActorLocation() };
+	FVector CurrentLocation{ OwnerRef->GetActorLocation() };
 	FCollisionShape Sphere{ FCollisionShape::MakeSphere(Radius)};
 	FCollisionQueryParams IgnoreParams{
 		FName{ TEXT("Ignore Collision Params")},
 		false,
-		GetOwner()
+		OwnerRef
 	};
 
 	bool bHasFoundTarget{ GetWorld()->SweepSingleByChannel(
@@ -38,5 +56,9 @@ void ULockonComponent::StartLockon(float Radius)
 
 	if (!bHasFoundTarget) { return; }
 
-	UE_LOG(LogTemp, Warning, TEXT("Actor Detected: %s"), *OutResult.GetActor()->GetName());
+	CurrentTargetActor = OutResult.GetActor();
+
+	Controller->SetIgnoreLookInput(true);
+	MovementComp->bOrientRotationToMovement = false;
+	MovementComp->bUseControllerDesiredRotation = true;
 }
