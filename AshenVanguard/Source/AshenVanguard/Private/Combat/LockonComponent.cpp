@@ -28,6 +28,14 @@ void ULockonComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	FVector CurrentLocation{ OwnerRef->GetActorLocation() };
 	FVector TargetLocation{ CurrentTargetActor->GetActorLocation() };
 
+	double TargetDistace{ FVector::Distance(CurrentLocation, TargetLocation)};
+
+	if (TargetDistace >= BreakDistance)
+	{
+		EndLockon();
+		return;
+	}
+
 	TargetLocation.Z -= 125.0;
 
 	FRotator NewRotation{ UKismetMathLibrary::FindLookAtRotation(
@@ -67,4 +75,28 @@ void ULockonComponent::StartLockon(float Radius)
 	MovementComp->bUseControllerDesiredRotation = true;
 
 	SpringArmComp->TargetOffset = FVector{ 0.0, 0.0, 100.0 };
+}
+
+void ULockonComponent::EndLockon()
+{
+	CurrentTargetActor = nullptr;
+
+	MovementComp->bOrientRotationToMovement = true;
+	MovementComp->bUseControllerDesiredRotation = false;
+
+	SpringArmComp->TargetOffset = FVector::ZeroVector;
+
+	Controller->ResetIgnoreLookInput();
+}
+
+void ULockonComponent::ToggleLockon(float Radius)
+{
+	if (IsValid(CurrentTargetActor))
+	{
+		EndLockon();
+	}
+	else
+	{
+		StartLockon();
+	}
 }
