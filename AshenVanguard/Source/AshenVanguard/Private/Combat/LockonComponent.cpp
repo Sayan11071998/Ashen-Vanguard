@@ -80,6 +80,8 @@ void ULockonComponent::StartLockon(float Radius)
 	SpringArmComp->TargetOffset = FVector{ 0.0, 0.0, 100.0 };
 
 	IEnemy::Execute_OnSelect(CurrentTargetActor);
+
+	OnUpdatedTargetDelegate.Broadcast(CurrentTargetActor);
 }
 
 void ULockonComponent::EndLockon()
@@ -94,6 +96,8 @@ void ULockonComponent::EndLockon()
 	SpringArmComp->TargetOffset = FVector::ZeroVector;
 
 	Controller->ResetIgnoreLookInput();
+
+	OnUpdatedTargetDelegate.Broadcast(CurrentTargetActor);
 }
 
 void ULockonComponent::ToggleLockon(float Radius)

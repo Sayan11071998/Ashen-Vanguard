@@ -1,4 +1,5 @@
 #include "Characters/MainCharacter.h"
+#include "Animations/PlayerAnimInstance.h"
 
 AMainCharacter::AMainCharacter()
 {
@@ -8,6 +9,8 @@ AMainCharacter::AMainCharacter()
 void AMainCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	PlayerAnim = Cast<UPlayerAnimInstance>(GetMesh()->GetAnimInstance());
 }
 
 void AMainCharacter::Tick(float DeltaTime)

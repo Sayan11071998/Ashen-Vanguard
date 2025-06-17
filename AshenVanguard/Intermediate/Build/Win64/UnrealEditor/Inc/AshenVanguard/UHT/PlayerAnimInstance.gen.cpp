@@ -13,9 +13,81 @@ void EmptyLinkFunctionForGeneratedCodePlayerAnimInstance() {}
 // Begin Cross Module References
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UPlayerAnimInstance();
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UPlayerAnimInstance_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UAnimInstance();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
+
+// Begin Class UPlayerAnimInstance Function HandleUpdatedTarget
+struct Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics
+{
+	struct PlayerAnimInstance_eventHandleUpdatedTarget_Parms
+	{
+		AActor* NewTargetActorRef;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Animations/PlayerAnimInstance.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_NewTargetActorRef;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::NewProp_NewTargetActorRef = { "NewTargetActorRef", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerAnimInstance_eventHandleUpdatedTarget_Parms, NewTargetActorRef), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::NewProp_NewTargetActorRef,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerAnimInstance, nullptr, "HandleUpdatedTarget", nullptr, nullptr, Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::PlayerAnimInstance_eventHandleUpdatedTarget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::PlayerAnimInstance_eventHandleUpdatedTarget_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayerAnimInstance::execHandleUpdatedTarget)
+{
+	P_GET_OBJECT(AActor,Z_Param_NewTargetActorRef);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleUpdatedTarget(Z_Param_NewTargetActorRef);
+	P_NATIVE_END;
+}
+// End Class UPlayerAnimInstance Function HandleUpdatedTarget
+
+// Begin Class UPlayerAnimInstance Function UpdateDirection
+struct Z_Construct_UFunction_UPlayerAnimInstance_UpdateDirection_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Animations/PlayerAnimInstance.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayerAnimInstance_UpdateDirection_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayerAnimInstance, nullptr, "UpdateDirection", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayerAnimInstance_UpdateDirection_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayerAnimInstance_UpdateDirection_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UPlayerAnimInstance_UpdateDirection()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayerAnimInstance_UpdateDirection_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayerAnimInstance::execUpdateDirection)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateDirection();
+	P_NATIVE_END;
+}
+// End Class UPlayerAnimInstance Function UpdateDirection
 
 // Begin Class UPlayerAnimInstance Function UpdateVelocity
 struct Z_Construct_UFunction_UPlayerAnimInstance_UpdateVelocity_Statics
@@ -51,6 +123,8 @@ void UPlayerAnimInstance::StaticRegisterNativesUPlayerAnimInstance()
 {
 	UClass* Class = UPlayerAnimInstance::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleUpdatedTarget", &UPlayerAnimInstance::execHandleUpdatedTarget },
+		{ "UpdateDirection", &UPlayerAnimInstance::execUpdateDirection },
 		{ "UpdateVelocity", &UPlayerAnimInstance::execUpdateVelocity },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -72,11 +146,24 @@ struct Z_Construct_UClass_UPlayerAnimInstance_Statics
 		{ "Category", "PlayerAnimInstance" },
 		{ "ModuleRelativePath", "Public/Animations/PlayerAnimInstance.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsInCombat_MetaData[] = {
+		{ "Category", "PlayerAnimInstance" },
+		{ "ModuleRelativePath", "Public/Animations/PlayerAnimInstance.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentDirection_MetaData[] = {
+		{ "Category", "PlayerAnimInstance" },
+		{ "ModuleRelativePath", "Public/Animations/PlayerAnimInstance.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentVelocity;
+	static void NewProp_bIsInCombat_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsInCombat;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentDirection;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UPlayerAnimInstance_HandleUpdatedTarget, "HandleUpdatedTarget" }, // 790084901
+		{ &Z_Construct_UFunction_UPlayerAnimInstance_UpdateDirection, "UpdateDirection" }, // 3774094654
 		{ &Z_Construct_UFunction_UPlayerAnimInstance_UpdateVelocity, "UpdateVelocity" }, // 3794692036
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -86,8 +173,16 @@ struct Z_Construct_UClass_UPlayerAnimInstance_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_CurrentVelocity = { "CurrentVelocity", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, CurrentVelocity), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentVelocity_MetaData), NewProp_CurrentVelocity_MetaData) };
+void Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_bIsInCombat_SetBit(void* Obj)
+{
+	((UPlayerAnimInstance*)Obj)->bIsInCombat = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_bIsInCombat = { "bIsInCombat", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UPlayerAnimInstance), &Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_bIsInCombat_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsInCombat_MetaData), NewProp_bIsInCombat_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_CurrentDirection = { "CurrentDirection", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayerAnimInstance, CurrentDirection), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentDirection_MetaData), NewProp_CurrentDirection_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayerAnimInstance_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_CurrentVelocity,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_bIsInCombat,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayerAnimInstance_Statics::NewProp_CurrentDirection,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayerAnimInstance_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UPlayerAnimInstance_Statics::DependentSingletons[])() = {
@@ -131,10 +226,10 @@ UPlayerAnimInstance::~UPlayerAnimInstance() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_PlayerAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UPlayerAnimInstance, UPlayerAnimInstance::StaticClass, TEXT("UPlayerAnimInstance"), &Z_Registration_Info_UClass_UPlayerAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAnimInstance), 1409789707U) },
+		{ Z_Construct_UClass_UPlayerAnimInstance, UPlayerAnimInstance::StaticClass, TEXT("UPlayerAnimInstance"), &Z_Registration_Info_UClass_UPlayerAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayerAnimInstance), 1282099492U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_PlayerAnimInstance_h_1254455543(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_PlayerAnimInstance_h_3702693799(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_PlayerAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_PlayerAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

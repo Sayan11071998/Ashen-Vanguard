@@ -12,9 +12,55 @@ void EmptyLinkFunctionForGeneratedCodeLockonComponent() {}
 // Begin Cross Module References
 ASHENVANGUARD_API UClass* Z_Construct_UClass_ULockonComponent();
 ASHENVANGUARD_API UClass* Z_Construct_UClass_ULockonComponent_NoRegister();
+ASHENVANGUARD_API UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
+
+// Begin Delegate FOnUpdatedTargetSignature
+struct Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics
+{
+	struct _Script_AshenVanguard_eventOnUpdatedTargetSignature_Parms
+	{
+		AActor* NewTargetActorRef;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Combat/LockonComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_NewTargetActorRef;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::NewProp_NewTargetActorRef = { "NewTargetActorRef", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_AshenVanguard_eventOnUpdatedTargetSignature_Parms, NewTargetActorRef), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::NewProp_NewTargetActorRef,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_AshenVanguard, nullptr, "OnUpdatedTargetSignature__DelegateSignature", "LockonComponent", "OnUpdatedTargetDelegate", Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::_Script_AshenVanguard_eventOnUpdatedTargetSignature_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::_Script_AshenVanguard_eventOnUpdatedTargetSignature_Parms) < MAX_uint16);
+UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FOnUpdatedTargetSignature_DelegateWrapper(const FMulticastScriptDelegate& OnUpdatedTargetSignature, AActor* NewTargetActorRef)
+{
+	struct _Script_AshenVanguard_eventOnUpdatedTargetSignature_Parms
+	{
+		AActor* NewTargetActorRef;
+	};
+	_Script_AshenVanguard_eventOnUpdatedTargetSignature_Parms Parms;
+	Parms.NewTargetActorRef=NewTargetActorRef;
+	OnUpdatedTargetSignature.ProcessMulticastDelegate<UObject>(&Parms);
+}
+// End Delegate FOnUpdatedTargetSignature
 
 // Begin Class ULockonComponent Function StartLockon
 struct Z_Construct_UFunction_ULockonComponent_StartLockon_Statics
@@ -126,11 +172,15 @@ struct Z_Construct_UClass_ULockonComponent_Statics
 		{ "IncludePath", "Combat/LockonComponent.h" },
 		{ "ModuleRelativePath", "Public/Combat/LockonComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnUpdatedTargetDelegate_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Combat/LockonComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BreakDistance_MetaData[] = {
 		{ "Category", "LockonComponent" },
 		{ "ModuleRelativePath", "Public/Combat/LockonComponent.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnUpdatedTargetDelegate;
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_BreakDistance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -144,8 +194,10 @@ struct Z_Construct_UClass_ULockonComponent_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ULockonComponent_Statics::NewProp_OnUpdatedTargetDelegate = { "OnUpdatedTargetDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::SparseMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ULockonComponent, OnUpdatedTargetDelegate), Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnUpdatedTargetDelegate_MetaData), NewProp_OnUpdatedTargetDelegate_MetaData) }; // 2254627568
 const UECodeGen_Private::FDoublePropertyParams Z_Construct_UClass_ULockonComponent_Statics::NewProp_BreakDistance = { "BreakDistance", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Double, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ULockonComponent, BreakDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BreakDistance_MetaData), NewProp_BreakDistance_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ULockonComponent_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ULockonComponent_Statics::NewProp_OnUpdatedTargetDelegate,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ULockonComponent_Statics::NewProp_BreakDistance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ULockonComponent_Statics::PropPointers) < 2048);
@@ -189,10 +241,10 @@ ULockonComponent::~ULockonComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_LockonComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ULockonComponent, ULockonComponent::StaticClass, TEXT("ULockonComponent"), &Z_Registration_Info_UClass_ULockonComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULockonComponent), 3429337336U) },
+		{ Z_Construct_UClass_ULockonComponent, ULockonComponent::StaticClass, TEXT("ULockonComponent"), &Z_Registration_Info_UClass_ULockonComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULockonComponent), 761209722U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_LockonComponent_h_2614352856(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_LockonComponent_h_2029359906(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_LockonComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_LockonComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

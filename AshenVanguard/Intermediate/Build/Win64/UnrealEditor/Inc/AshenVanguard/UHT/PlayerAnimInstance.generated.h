@@ -9,12 +9,15 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef ASHENVANGUARD_PlayerAnimInstance_generated_h
 #error "PlayerAnimInstance.generated.h already included, missing '#pragma once' in PlayerAnimInstance.h"
 #endif
 #define ASHENVANGUARD_PlayerAnimInstance_generated_h
 
 #define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_PlayerAnimInstance_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execUpdateDirection); \
+	DECLARE_FUNCTION(execHandleUpdatedTarget); \
 	DECLARE_FUNCTION(execUpdateVelocity);
 
 
