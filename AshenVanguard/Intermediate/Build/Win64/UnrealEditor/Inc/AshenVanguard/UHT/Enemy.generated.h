@@ -14,6 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ASHENVANGUARD_Enemy_generated_h
 
+#define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_10_CALLBACK_WRAPPERS
 #define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_10_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	ASHENVANGUARD_API UEnemy(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
@@ -51,6 +52,8 @@ protected: \
 public: \
 	typedef UEnemy UClassType; \
 	typedef IEnemy ThisClass; \
+	static void Execute_OnDeselect(UObject* O); \
+	static void Execute_OnSelect(UObject* O); \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
@@ -58,6 +61,7 @@ public: \
 #define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_10_CALLBACK_WRAPPERS \
 	FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_10_INCLASS_IINTERFACE_NO_PURE_DECLS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

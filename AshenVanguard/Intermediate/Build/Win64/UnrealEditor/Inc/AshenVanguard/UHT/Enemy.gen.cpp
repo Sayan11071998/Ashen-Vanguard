@@ -16,6 +16,80 @@ COREUOBJECT_API UClass* Z_Construct_UClass_UInterface();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
 
+// Begin Interface UEnemy Function OnDeselect
+void IEnemy::OnDeselect()
+{
+	check(0 && "Do not directly call Event functions in Interfaces. Call Execute_OnDeselect instead.");
+}
+static FName NAME_UEnemy_OnDeselect = FName(TEXT("OnDeselect"));
+void IEnemy::Execute_OnDeselect(UObject* O)
+{
+	check(O != NULL);
+	check(O->GetClass()->ImplementsInterface(UEnemy::StaticClass()));
+	UFunction* const Func = O->FindFunction(NAME_UEnemy_OnDeselect);
+	if (Func)
+	{
+		O->ProcessEvent(Func, NULL);
+	}
+}
+struct Z_Construct_UFunction_UEnemy_OnDeselect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Interfaces/Enemy.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnemy_OnDeselect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnemy, nullptr, "OnDeselect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemy_OnDeselect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEnemy_OnDeselect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UEnemy_OnDeselect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEnemy_OnDeselect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Interface UEnemy Function OnDeselect
+
+// Begin Interface UEnemy Function OnSelect
+void IEnemy::OnSelect()
+{
+	check(0 && "Do not directly call Event functions in Interfaces. Call Execute_OnSelect instead.");
+}
+static FName NAME_UEnemy_OnSelect = FName(TEXT("OnSelect"));
+void IEnemy::Execute_OnSelect(UObject* O)
+{
+	check(O != NULL);
+	check(O->GetClass()->ImplementsInterface(UEnemy::StaticClass()));
+	UFunction* const Func = O->FindFunction(NAME_UEnemy_OnSelect);
+	if (Func)
+	{
+		O->ProcessEvent(Func, NULL);
+	}
+}
+struct Z_Construct_UFunction_UEnemy_OnSelect_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Interfaces/Enemy.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnemy_OnSelect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnemy, nullptr, "OnSelect", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemy_OnSelect_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEnemy_OnSelect_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UEnemy_OnSelect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEnemy_OnSelect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// End Interface UEnemy Function OnSelect
+
 // Begin Interface UEnemy
 void UEnemy::StaticRegisterNativesUEnemy()
 {
@@ -33,6 +107,11 @@ struct Z_Construct_UClass_UEnemy_Statics
 	};
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UEnemy_OnDeselect, "OnDeselect" }, // 3175341073
+		{ &Z_Construct_UFunction_UEnemy_OnSelect, "OnSelect" }, // 1834397257
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<IEnemy>::IsAbstract,
 	};
@@ -48,11 +127,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UEnemy_Statics::ClassPa
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	nullptr,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	0,
 	0,
 	0x000840A1u,
@@ -79,10 +158,10 @@ UEnemy::~UEnemy() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UEnemy, UEnemy::StaticClass, TEXT("UEnemy"), &Z_Registration_Info_UClass_UEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEnemy), 4200229855U) },
+		{ Z_Construct_UClass_UEnemy, UEnemy::StaticClass, TEXT("UEnemy"), &Z_Registration_Info_UClass_UEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEnemy), 2299304466U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_1977334439(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_1946210613(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Interfaces_Enemy_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
