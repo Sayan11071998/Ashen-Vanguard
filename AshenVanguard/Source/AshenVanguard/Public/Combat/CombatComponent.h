@@ -10,6 +10,9 @@ class ASHENVANGUARD_API UCombatComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
+	UPROPERTY(EditAnywhere)
+	TArray<UAnimMontage*> AttackAnimations;
+
 public:	
 	UCombatComponent();
 
