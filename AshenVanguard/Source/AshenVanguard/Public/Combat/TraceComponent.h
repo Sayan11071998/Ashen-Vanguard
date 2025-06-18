@@ -20,6 +20,9 @@ class ASHENVANGUARD_API UTraceComponent : public UActorComponent
 
 	UPROPERTY(EditAnywhere)
 	FName Rotation;
+	
+	UPROPERTY(EditAnywhere)
+	double BoxCollisionLength{ 30.0 };
 
 public:	
 	UTraceComponent();
