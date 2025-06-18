@@ -1,4 +1,6 @@
 #include "Combat/TraceComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/KismetMathLibrary.h"
 
 UTraceComponent::UTraceComponent()
 {
@@ -41,12 +43,18 @@ void UTraceComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 		IgnoreParams
 	) };
 
-	if (bHasFoundTargets)
+	if (bDebugMode)
 	{
-		UE_LOG(
-			LogTemp,
-			Warning,
-			TEXT("Target Found")
+		FVector CenterPoint{ UKismetMathLibrary::VLerp(StartSocketLocation, EndSocketLocation, 0.5) };
+		
+		UKismetSystemLibrary::DrawDebugBox(
+			GetWorld(),
+			CenterPoint,
+			Box.GetExtent(),
+			bHasFoundTargets ? FLinearColor::Green : FLinearColor::Red,
+			ShapeRotation.Rotator(),
+			1.0f,
+			2.0f
 		);
 	}
 }

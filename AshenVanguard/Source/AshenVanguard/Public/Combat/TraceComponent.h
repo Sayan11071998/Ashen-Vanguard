@@ -24,6 +24,9 @@ class ASHENVANGUARD_API UTraceComponent : public UActorComponent
 	UPROPERTY(EditAnywhere)
 	double BoxCollisionLength{ 30.0 };
 
+	UPROPERTY(EditAnywhere)
+	bool bDebugMode{ false };
+
 public:	
 	UTraceComponent();
 
