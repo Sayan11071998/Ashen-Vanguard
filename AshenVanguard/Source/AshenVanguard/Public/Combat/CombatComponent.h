@@ -18,6 +18,9 @@ class ASHENVANGUARD_API UCombatComponent : public UActorComponent
 	UPROPERTY(VisibleAnywhere)
 	int ComboCounter{ 0 };
 
+	UPROPERTY(VisibleAnywhere)
+	bool bCanAttack{ true };
+
 public:	
 	UCombatComponent();
 
@@ -29,4 +32,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void ComboAttack();
+
+	UFUNCTION(BlueprintCallable)
+	void HandleResetAttack();
 };
