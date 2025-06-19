@@ -13,7 +13,9 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
-            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl"
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\interfaces\\fighter.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\fighter.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

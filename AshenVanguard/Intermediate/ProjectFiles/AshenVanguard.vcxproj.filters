@@ -91,6 +91,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Interfaces\Enemy.cpp">
       <Filter>Source\AshenVanguard\Private\Interfaces</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Interfaces\Fighter.cpp">
+      <Filter>Source\AshenVanguard\Private\Interfaces</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Interfaces\MainPlayer.cpp">
       <Filter>Source\AshenVanguard\Private\Interfaces</Filter>
     </ClCompile>
@@ -140,6 +143,9 @@
       <UniqueIdentifier>{D6D80A3C-CF36-3835-A9E9-F80522192B94}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Interfaces\Enemy.h">
+      <Filter>Source\AshenVanguard\Public\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Interfaces\Fighter.h">
       <Filter>Source\AshenVanguard\Public\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Interfaces\MainPlayer.h">

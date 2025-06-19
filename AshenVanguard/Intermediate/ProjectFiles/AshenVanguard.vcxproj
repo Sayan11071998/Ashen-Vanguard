@@ -297,6 +297,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Interfaces\Enemy.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Interfaces\Fighter.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Interfaces\MainPlayer.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -311,6 +314,7 @@
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\LockonComponent.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\TraceComponent.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Interfaces\Enemy.h"/>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Interfaces\Fighter.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Interfaces\MainPlayer.h"/>
   </ItemGroup>
   <PropertyGroup>
