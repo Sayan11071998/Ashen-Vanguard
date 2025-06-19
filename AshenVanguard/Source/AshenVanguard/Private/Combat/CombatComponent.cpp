@@ -23,7 +23,6 @@ void UCombatComponent::ComboAttack()
 {
 	if (!bCanAttack) { return; }
 
-
 	bCanAttack = false;
 
 	CharacterRef->PlayAnimMontage(AttackAnimations[ComboCounter]);
@@ -33,6 +32,8 @@ void UCombatComponent::ComboAttack()
 	int MaxCombo{ AttackAnimations.Num() };
 
 	ComboCounter = UKismetMathLibrary::Wrap(ComboCounter, -1, MaxCombo - 1);
+
+	OnAttackPerformedDelegate.Broadcast(StaminaCost);
 }
 
 void UCombatComponent::HandleResetAttack()
