@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Characters/EStat.h"
 #include "StatsComponent.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -13,7 +14,7 @@ public:
 	UStatsComponent();
 
 	UPROPERTY(EditAnywhere)
-	TMap<FString, float> Stats;
+	TMap<TEnumAsByte<EStat>, float> Stats;
 
 protected:
 	virtual void BeginPlay() override;

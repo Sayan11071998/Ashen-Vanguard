@@ -7,6 +7,7 @@
         "Includes": [
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ashenvanguard\\definitions.ashenvanguard.h",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\characters\\statscomponent.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\characters\\estat.h",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\statscomponent.generated.h"
         ],
         "ImportedModules": [],
