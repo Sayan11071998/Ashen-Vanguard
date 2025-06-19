@@ -16,9 +16,43 @@ ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
 
+// Begin Class UTraceComponent Function HandleResetAttack
+struct Z_Construct_UFunction_UTraceComponent_HandleResetAttack_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Combat/TraceComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UTraceComponent_HandleResetAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UTraceComponent, nullptr, "HandleResetAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UTraceComponent_HandleResetAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_UTraceComponent_HandleResetAttack_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UTraceComponent_HandleResetAttack()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UTraceComponent_HandleResetAttack_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UTraceComponent::execHandleResetAttack)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleResetAttack();
+	P_NATIVE_END;
+}
+// End Class UTraceComponent Function HandleResetAttack
+
 // Begin Class UTraceComponent
 void UTraceComponent::StaticRegisterNativesUTraceComponent()
 {
+	UClass* Class = UTraceComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleResetAttack", &UTraceComponent::execHandleResetAttack },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UTraceComponent);
 UClass* Z_Construct_UClass_UTraceComponent_NoRegister()
@@ -63,6 +97,10 @@ struct Z_Construct_UClass_UTraceComponent_Statics
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bDebugMode;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UTraceComponent_HandleResetAttack, "HandleResetAttack" }, // 2094172131
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UTraceComponent>::IsAbstract,
 	};
@@ -95,11 +133,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UTraceComponent_Statics
 	"Engine",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UTraceComponent_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UTraceComponent_Statics::PropPointers),
 	0,
 	0x00B000A4u,
@@ -125,10 +163,10 @@ UTraceComponent::~UTraceComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UTraceComponent, UTraceComponent::StaticClass, TEXT("UTraceComponent"), &Z_Registration_Info_UClass_UTraceComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTraceComponent), 1229489685U) },
+		{ Z_Construct_UClass_UTraceComponent, UTraceComponent::StaticClass, TEXT("UTraceComponent"), &Z_Registration_Info_UClass_UTraceComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTraceComponent), 3505959795U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_590257327(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_3527313887(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

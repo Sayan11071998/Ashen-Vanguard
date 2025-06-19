@@ -27,6 +27,8 @@ class ASHENVANGUARD_API UTraceComponent : public UActorComponent
 	UPROPERTY(EditAnywhere)
 	bool bDebugMode{ false };
 
+	TArray<AActor*> TargetsToIgnore;
+
 public:	
 	UTraceComponent();
 
@@ -35,4 +37,7 @@ protected:
 
 public:	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	UFUNCTION(BlueprintCallable)
+	void HandleResetAttack();
 };
