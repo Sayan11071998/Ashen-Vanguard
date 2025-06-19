@@ -12,6 +12,9 @@ class ASHENVANGUARD_API UStatsComponent : public UActorComponent
 public:
 	UStatsComponent();
 
+	UPROPERTY(EditAnywhere)
+	TMap<FString, float> Stats;
+
 protected:
 	virtual void BeginPlay() override;
 
