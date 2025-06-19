@@ -2,8 +2,10 @@
 	"RemapUnityFiles": 
 	{
 		"Module.AshenVanguard.cpp.obj": [
+			"AshenVanguard.init.gen.cpp.obj",
 			"BlockComponent.gen.cpp.obj",
 			"BossCharacter.gen.cpp.obj",
+			"CombatComponent.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
 			"EStat.gen.cpp.obj",
 			"Fighter.gen.cpp.obj",
@@ -12,6 +14,7 @@
 			"MainPlayer.gen.cpp.obj",
 			"PlayerActionsComponent.gen.cpp.obj",
 			"PlayerAnimInstance.gen.cpp.obj",
+			"StatsComponent.gen.cpp.obj",
 			"Throwaway.gen.cpp.obj",
 			"ToggleTraceNotifyState.gen.cpp.obj",
 			"TraceComponent.gen.cpp.obj",
@@ -20,20 +23,17 @@
 			"ToggleTraceNotifyState.cpp.obj",
 			"BossCharacter.cpp.obj",
 			"EStat.cpp.obj",
-			"MainCharacter.cpp.obj",
 			"PlayerActionsComponent.cpp.obj",
+			"StatsComponent.cpp.obj",
 			"BlockComponent.cpp.obj",
 			"LockonComponent.cpp.obj",
 			"TraceComponent.cpp.obj",
 			"Enemy.cpp.obj",
 			"Fighter.cpp.obj",
-			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
-			"AshenVanguard.init.gen.cpp.obj",
-			"CombatComponent.gen.cpp.obj",
-			"StatsComponent.gen.cpp.obj",
-			"StatsComponent.cpp.obj",
-			"CombatComponent.cpp.obj"
+			"MainCharacter.cpp.obj",
+			"CombatComponent.cpp.obj",
+			"MainPlayer.cpp.obj"
 		]
 	}
 }

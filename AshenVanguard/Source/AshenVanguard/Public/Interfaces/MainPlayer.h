@@ -14,4 +14,5 @@ class ASHENVANGUARD_API IMainPlayer
 {
 	GENERATED_BODY()
 public:
+	virtual bool HasEnoughStamina(float Cost) { return true; }
 };
