@@ -10,6 +10,17 @@ class ASHENVANGUARD_API UCombatComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
+	UPROPERTY(EditAnywhere)
+	TArray<UAnimMontage*> AttackAnimations;
+
+	ACharacter* CharacterRef;
+
+	UPROPERTY(VisibleAnywhere)
+	int ComboCounter{ 0 };
+
+	UPROPERTY(VisibleAnywhere)
+	bool bCanAttack{ true };
+
 public:	
 	UCombatComponent();
 
@@ -18,4 +29,10 @@ protected:
 
 public:	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	UFUNCTION(BlueprintCallable)
+	void ComboAttack();
+
+	UFUNCTION(BlueprintCallable)
+	void HandleResetAttack();
 };
