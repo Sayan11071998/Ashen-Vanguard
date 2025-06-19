@@ -1,9 +1,13 @@
 #include "Characters/MainCharacter.h"
 #include "Animations/PlayerAnimInstance.h"
+#include "Characters/StatsComponent.h"
+#include "Characters/EStat.h"
 
 AMainCharacter::AMainCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
+
+	StatsComp = CreateDefaultSubobject<UStatsComponent>(TEXT("Stats Component"));
 }
 
 void AMainCharacter::BeginPlay()
@@ -25,5 +29,5 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 float AMainCharacter::GetDamage()
 {
-	return 10.0f;
+	return StatsComp->Stats[EStat::Strength];
 }

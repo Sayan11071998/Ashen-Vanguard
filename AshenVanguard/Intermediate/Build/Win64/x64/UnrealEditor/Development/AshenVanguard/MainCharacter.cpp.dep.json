@@ -21,7 +21,10 @@
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\fighter.generated.h",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\maincharacter.generated.h",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\animations\\playeraniminstance.h",
-            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\playeraniminstance.generated.h"
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\playeraniminstance.generated.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\characters\\statscomponent.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\characters\\estat.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\statscomponent.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -14,6 +14,9 @@ class ASHENVANGUARD_API AMainCharacter : public ACharacter, public IMainPlayer, 
 public:
 	AMainCharacter();
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	class UStatsComponent* StatsComp;
+
 protected:
 	virtual void BeginPlay() override;
 

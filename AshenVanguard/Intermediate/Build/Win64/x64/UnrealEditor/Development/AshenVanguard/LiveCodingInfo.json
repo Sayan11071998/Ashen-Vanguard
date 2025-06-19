@@ -6,12 +6,13 @@
 			"BossCharacter.gen.cpp.obj",
 			"CombatComponent.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
+			"EStat.gen.cpp.obj",
 			"Fighter.gen.cpp.obj",
 			"LockonComponent.gen.cpp.obj",
-			"MainCharacter.gen.cpp.obj",
 			"MainPlayer.gen.cpp.obj",
 			"PlayerActionsComponent.gen.cpp.obj",
 			"PlayerAnimInstance.gen.cpp.obj",
+			"StatsComponent.gen.cpp.obj",
 			"Throwaway.gen.cpp.obj",
 			"ToggleTraceNotifyState.gen.cpp.obj",
 			"TraceComponent.gen.cpp.obj",
@@ -19,8 +20,9 @@
 			"PlayerAnimInstance.cpp.obj",
 			"ToggleTraceNotifyState.cpp.obj",
 			"BossCharacter.cpp.obj",
-			"MainCharacter.cpp.obj",
+			"EStat.cpp.obj",
 			"PlayerActionsComponent.cpp.obj",
+			"StatsComponent.cpp.obj",
 			"BlockComponent.cpp.obj",
 			"CombatComponent.cpp.obj",
 			"LockonComponent.cpp.obj",
@@ -30,10 +32,8 @@
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
 			"AshenVanguard.init.gen.cpp.obj",
-			"EStat.gen.cpp.obj",
-			"StatsComponent.gen.cpp.obj",
-			"EStat.cpp.obj",
-			"StatsComponent.cpp.obj"
+			"MainCharacter.gen.cpp.obj",
+			"MainCharacter.cpp.obj"
 		]
 	}
 }
