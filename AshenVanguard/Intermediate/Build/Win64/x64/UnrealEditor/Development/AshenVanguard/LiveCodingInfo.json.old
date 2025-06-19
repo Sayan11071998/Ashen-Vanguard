@@ -2,9 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.AshenVanguard.cpp.obj": [
-			"AshenVanguard.init.gen.cpp.obj",
 			"BlockComponent.gen.cpp.obj",
-			"BossCharacter.gen.cpp.obj",
 			"CombatComponent.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
 			"EStat.gen.cpp.obj",
@@ -21,10 +19,9 @@
 			"AshenVanguard.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
 			"ToggleTraceNotifyState.cpp.obj",
-			"BossCharacter.cpp.obj",
 			"EStat.cpp.obj",
+			"MainCharacter.cpp.obj",
 			"PlayerActionsComponent.cpp.obj",
-			"StatsComponent.cpp.obj",
 			"BlockComponent.cpp.obj",
 			"CombatComponent.cpp.obj",
 			"LockonComponent.cpp.obj",
@@ -33,7 +30,10 @@
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
-			"MainCharacter.cpp.obj"
+			"AshenVanguard.init.gen.cpp.obj",
+			"BossCharacter.gen.cpp.obj",
+			"BossCharacter.cpp.obj",
+			"StatsComponent.cpp.obj"
 		]
 	}
 }
