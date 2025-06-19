@@ -32,6 +32,9 @@ class ASHENVANGUARD_API UTraceComponent : public UActorComponent
 public:	
 	UTraceComponent();
 
+	UPROPERTY(VisibleAnywhere)
+	bool bIsAttacking{ false };
+
 protected:
 	virtual void BeginPlay() override;
 

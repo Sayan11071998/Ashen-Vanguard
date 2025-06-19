@@ -55,6 +55,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\PlayerAnimInstance.cpp">
       <Filter>Source\AshenVanguard\Private\Animations</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\ToggleTraceNotifyState.cpp">
+      <Filter>Source\AshenVanguard\Private\Animations</Filter>
+    </ClCompile>
     <Filter Include="Source\AshenVanguard\Private\Characters">
       <UniqueIdentifier>{218252FF-6BF7-3E4C-9E2C-C8DD9C48F381}</UniqueIdentifier>
     </Filter>
@@ -107,6 +110,9 @@
       <UniqueIdentifier>{BBB19684-CC73-3878-B17A-8E0FD7EF4300}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\PlayerAnimInstance.h">
+      <Filter>Source\AshenVanguard\Public\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\ToggleTraceNotifyState.h">
       <Filter>Source\AshenVanguard\Public\Animations</Filter>
     </ClInclude>
     <Filter Include="Source\AshenVanguard\Public\Characters">
