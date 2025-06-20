@@ -23,7 +23,7 @@
 			"ToggleTraceNotifyState.cpp.obj",
 			"BossCharacter.cpp.obj",
 			"EStat.cpp.obj",
-			"PlayerActionsComponent.cpp.obj",
+			"MainCharacter.cpp.obj",
 			"StatsComponent.cpp.obj",
 			"BlockComponent.cpp.obj",
 			"CombatComponent.cpp.obj",
@@ -31,9 +31,9 @@
 			"TraceComponent.cpp.obj",
 			"Enemy.cpp.obj",
 			"Fighter.cpp.obj",
+			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
-			"MainCharacter.cpp.obj",
-			"MainPlayer.cpp.obj"
+			"PlayerActionsComponent.cpp.obj"
 		]
 	}
 }
