@@ -24,6 +24,7 @@
 			"BossCharacter.cpp.obj",
 			"EStat.cpp.obj",
 			"MainCharacter.cpp.obj",
+			"PlayerActionsComponent.cpp.obj",
 			"StatsComponent.cpp.obj",
 			"BlockComponent.cpp.obj",
 			"CombatComponent.cpp.obj",
@@ -32,8 +33,7 @@
 			"Enemy.cpp.obj",
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
-			"Throwaway.cpp.obj",
-			"PlayerActionsComponent.cpp.obj"
+			"Throwaway.cpp.obj"
 		]
 	}
 }

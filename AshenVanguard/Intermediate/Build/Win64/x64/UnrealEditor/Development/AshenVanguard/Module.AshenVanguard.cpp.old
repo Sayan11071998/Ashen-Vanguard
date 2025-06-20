@@ -21,6 +21,7 @@
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/BossCharacter.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/EStat.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/MainCharacter.cpp"
+#include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/PlayerActionsComponent.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/StatsComponent.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Combat/BlockComponent.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Combat/CombatComponent.cpp"

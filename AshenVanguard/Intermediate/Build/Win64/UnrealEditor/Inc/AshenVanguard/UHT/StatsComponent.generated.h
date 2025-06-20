@@ -15,6 +15,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define ASHENVANGUARD_StatsComponent_generated_h
 
 #define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execRegenStamina); \
 	DECLARE_FUNCTION(execReduceStamina); \
 	DECLARE_FUNCTION(execReduceHealth);
 
