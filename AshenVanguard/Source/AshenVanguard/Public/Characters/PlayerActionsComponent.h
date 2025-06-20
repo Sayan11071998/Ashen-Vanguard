@@ -4,6 +4,14 @@
 #include "Components/ActorComponent.h"
 #include "PlayerActionsComponent.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(
+	FOnSprintSignature,
+	UPlayerActionsComponent,
+	OnSprintDelegate,
+	float,
+	cost
+);
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ASHENVANGUARD_API UPlayerActionsComponent : public UActorComponent
 {
@@ -26,6 +34,9 @@ class ASHENVANGUARD_API UPlayerActionsComponent : public UActorComponent
 
 public:	
 	UPlayerActionsComponent();
+
+	UPROPERTY(BlueprintAssignable)
+	FOnSprintSignature OnSprintDelegate;
 
 protected:
 	virtual void BeginPlay() override;
