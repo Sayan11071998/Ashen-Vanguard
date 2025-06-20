@@ -14,6 +14,24 @@ class ASHENVANGUARD_API AMainCharacter : public ACharacter, public IMainPlayer, 
 public:
 	AMainCharacter();
 
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	class UStatsComponent* StatsComp;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	class ULockonComponent* LockonComp;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	class UCombatComponent* CombatComp;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	class UTraceComponent* TraceComp;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	class UBlockComponent* BlockComp;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	class UPlayerActionsComponent* PlayerActionComp;
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -26,4 +44,6 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	virtual float GetDamage() override;
+
+	virtual bool HasEnoughStamina(float Cost) override;
 };

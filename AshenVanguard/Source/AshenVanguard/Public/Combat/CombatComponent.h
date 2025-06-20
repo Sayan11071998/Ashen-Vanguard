@@ -4,6 +4,13 @@
 #include "Components/ActorComponent.h"
 #include "CombatComponent.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(
+	FOnAttackPerformedSignature,
+	UCombatComponent,
+	OnAttackPerformedDelegate,
+	float,
+	Amount
+);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ASHENVANGUARD_API UCombatComponent : public UActorComponent
@@ -21,8 +28,14 @@ class ASHENVANGUARD_API UCombatComponent : public UActorComponent
 	UPROPERTY(VisibleAnywhere)
 	bool bCanAttack{ true };
 
+	UPROPERTY(EditAnywhere)
+	float StaminaCost{ 5.0f };
+
 public:	
 	UCombatComponent();
+
+	UPROPERTY(BlueprintAssignable)
+	FOnAttackPerformedSignature OnAttackPerformedDelegate;
 
 protected:
 	virtual void BeginPlay() override;
