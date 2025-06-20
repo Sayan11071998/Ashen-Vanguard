@@ -13,6 +13,12 @@ class ASHENVANGUARD_API UStatsComponent : public UActorComponent
 	UPROPERTY(EditAnywhere)
 	double StaminaRegenRate{ 10.0 };
 
+	UPROPERTY(VisibleAnywhere)
+	bool bCanRegen{ true };
+
+	UPROPERTY(EditAnywhere)
+	float StaminaDelayDuration{ 2.0f };
+
 public:
 	UStatsComponent();
 
@@ -33,4 +39,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void RegenStamina();
+
+	UFUNCTION()
+	void EnableRegen();
 };
