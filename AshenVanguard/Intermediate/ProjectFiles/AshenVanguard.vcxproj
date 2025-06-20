@@ -267,6 +267,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Throwaway.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\BossAnimInstance.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\PlayerAnimInstance.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -310,6 +313,7 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Throwaway.h"/>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\BossAnimInstance.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\PlayerAnimInstance.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\ToggleTraceNotifyState.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\BossCharacter.h"/>

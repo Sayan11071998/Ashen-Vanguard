@@ -52,6 +52,9 @@
     <Filter Include="Source\AshenVanguard\Private\Animations">
       <UniqueIdentifier>{83EFA15F-3651-3594-B54E-C54BF2965406}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\BossAnimInstance.cpp">
+      <Filter>Source\AshenVanguard\Private\Animations</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\PlayerAnimInstance.cpp">
       <Filter>Source\AshenVanguard\Private\Animations</Filter>
     </ClCompile>
@@ -112,6 +115,9 @@
     <Filter Include="Source\AshenVanguard\Public\Animations">
       <UniqueIdentifier>{BBB19684-CC73-3878-B17A-8E0FD7EF4300}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\BossAnimInstance.h">
+      <Filter>Source\AshenVanguard\Public\Animations</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\PlayerAnimInstance.h">
       <Filter>Source\AshenVanguard\Public\Animations</Filter>
     </ClInclude>

@@ -15,12 +15,65 @@ ASHENVANGUARD_API UClass* Z_Construct_UClass_ABossCharacter_NoRegister();
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UEnemy_NoRegister();
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UStatsComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
+
+// Begin Class ABossCharacter Function DetectPawn
+struct Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics
+{
+	struct BossCharacter_eventDetectPawn_Parms
+	{
+		APawn* DetectedPawn;
+		APawn* PawnToDetect;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Characters/BossCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DetectedPawn;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PawnToDetect;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::NewProp_DetectedPawn = { "DetectedPawn", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BossCharacter_eventDetectPawn_Parms, DetectedPawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::NewProp_PawnToDetect = { "PawnToDetect", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BossCharacter_eventDetectPawn_Parms, PawnToDetect), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::NewProp_DetectedPawn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::NewProp_PawnToDetect,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABossCharacter, nullptr, "DetectPawn", nullptr, nullptr, Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::PropPointers), sizeof(Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::BossCharacter_eventDetectPawn_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::BossCharacter_eventDetectPawn_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ABossCharacter_DetectPawn()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABossCharacter_DetectPawn_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABossCharacter::execDetectPawn)
+{
+	P_GET_OBJECT(APawn,Z_Param_DetectedPawn);
+	P_GET_OBJECT(APawn,Z_Param_PawnToDetect);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DetectPawn(Z_Param_DetectedPawn,Z_Param_PawnToDetect);
+	P_NATIVE_END;
+}
+// End Class ABossCharacter Function DetectPawn
 
 // Begin Class ABossCharacter
 void ABossCharacter::StaticRegisterNativesABossCharacter()
 {
+	UClass* Class = ABossCharacter::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DetectPawn", &ABossCharacter::execDetectPawn },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ABossCharacter);
 UClass* Z_Construct_UClass_ABossCharacter_NoRegister()
@@ -44,6 +97,10 @@ struct Z_Construct_UClass_ABossCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StatsComp;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABossCharacter_DetectPawn, "DetectPawn" }, // 1807264011
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABossCharacter>::IsAbstract,
@@ -68,11 +125,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ABossCharacter_Statics:
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_ABossCharacter_Statics::PropPointers,
 	InterfaceParams,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ABossCharacter_Statics::PropPointers),
 	UE_ARRAY_COUNT(InterfaceParams),
 	0x009000A4u,
@@ -98,10 +155,10 @@ ABossCharacter::~ABossCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABossCharacter, ABossCharacter::StaticClass, TEXT("ABossCharacter"), &Z_Registration_Info_UClass_ABossCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABossCharacter), 3952132971U) },
+		{ Z_Construct_UClass_ABossCharacter, ABossCharacter::StaticClass, TEXT("ABossCharacter"), &Z_Registration_Info_UClass_ABossCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABossCharacter), 616146910U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_2938059360(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_765630919(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
