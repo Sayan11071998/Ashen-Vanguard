@@ -20,9 +20,9 @@
 			"ToggleTraceNotifyState.gen.cpp.obj",
 			"TraceComponent.gen.cpp.obj",
 			"AshenVanguard.cpp.obj",
+			"BossAnimInstance.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
 			"ToggleTraceNotifyState.cpp.obj",
-			"BossCharacter.cpp.obj",
 			"EStat.cpp.obj",
 			"MainCharacter.cpp.obj",
 			"PlayerActionsComponent.cpp.obj",
@@ -35,7 +35,7 @@
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
-			"BossAnimInstance.cpp.obj"
+			"BossCharacter.cpp.obj"
 		]
 	}
 }

@@ -3,7 +3,7 @@
 	{
 		"Module.AshenVanguard.cpp.obj": [
 			"BlockComponent.gen.cpp.obj",
-			"BossCharacter.gen.cpp.obj",
+			"BossAnimInstance.gen.cpp.obj",
 			"CombatComponent.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
 			"EStat.gen.cpp.obj",
@@ -18,9 +18,9 @@
 			"ToggleTraceNotifyState.gen.cpp.obj",
 			"TraceComponent.gen.cpp.obj",
 			"AshenVanguard.cpp.obj",
+			"BossAnimInstance.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
 			"ToggleTraceNotifyState.cpp.obj",
-			"BossCharacter.cpp.obj",
 			"EStat.cpp.obj",
 			"MainCharacter.cpp.obj",
 			"PlayerActionsComponent.cpp.obj",
@@ -34,8 +34,8 @@
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
 			"AshenVanguard.init.gen.cpp.obj",
-			"BossAnimInstance.gen.cpp.obj",
-			"BossAnimInstance.cpp.obj"
+			"BossCharacter.gen.cpp.obj",
+			"BossCharacter.cpp.obj"
 		]
 	}
 }
