@@ -279,6 +279,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\BossCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\EEnemyState.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\EStat.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -317,6 +320,7 @@
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\PlayerAnimInstance.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\ToggleTraceNotifyState.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\BossCharacter.h"/>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\EEnemyState.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\EStat.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\MainCharacter.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\PlayerActionsComponent.h"/>

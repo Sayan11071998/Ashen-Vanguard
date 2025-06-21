@@ -4,6 +4,7 @@
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/BossAnimInstance.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/BossCharacter.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/CombatComponent.gen.cpp"
+#include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/EEnemyState.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/Enemy.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/EStat.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/Fighter.gen.cpp"
