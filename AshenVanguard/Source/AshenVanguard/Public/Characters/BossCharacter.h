@@ -3,12 +3,18 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Interfaces/Enemy.h"
+#include "Characters/EEnemyState.h"
 #include "BossCharacter.generated.h"
 
 UCLASS()
 class ASHENVANGUARD_API ABossCharacter : public ACharacter, public IEnemy
 {
 	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere)
+	TEnumAsByte<EEnemyState> InitialState;
+
+	class UBlackboardComponent* BlackboardComp;
 
 public:
 	ABossCharacter();

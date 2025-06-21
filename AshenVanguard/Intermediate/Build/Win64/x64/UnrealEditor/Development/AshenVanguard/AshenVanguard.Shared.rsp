@@ -285,6 +285,9 @@
 /I "C:\Users\sayan\Projects\Ashen-Vanguard\AshenVanguard\Intermediate\Build\Win64\UnrealEditor\Inc\AshenVanguard\UHT"
 /I "C:\Users\sayan\Projects\Ashen-Vanguard\AshenVanguard\Source"
 /I "C:\Users\sayan\Projects\Ashen-Vanguard\AshenVanguard\Source\AshenVanguard\Public"
+/I "..\Intermediate\Build\Win64\UnrealEditor\Inc\AIModule\UHT"
+/I "Runtime\AIModule\Classes"
+/I "Runtime\AIModule\Public"
 /external:W0
 /external:I "ThirdParty\LibTiff\Source\Win64"
 /external:I "ThirdParty\LibTiff\Source"
