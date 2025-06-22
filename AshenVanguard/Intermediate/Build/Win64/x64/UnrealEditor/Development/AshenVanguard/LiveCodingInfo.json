@@ -13,6 +13,8 @@
 			"EStat.gen.cpp.obj",
 			"Fighter.gen.cpp.obj",
 			"LockonComponent.gen.cpp.obj",
+			"LookAtPlayerAnimNotifyState.gen.cpp.obj",
+			"LookAtPlayerComponent.gen.cpp.obj",
 			"MainCharacter.gen.cpp.obj",
 			"MainPlayer.gen.cpp.obj",
 			"PlayerActionsComponent.gen.cpp.obj",
@@ -23,12 +25,14 @@
 			"TraceComponent.gen.cpp.obj",
 			"AshenVanguard.cpp.obj",
 			"BossAnimInstance.cpp.obj",
+			"LookAtPlayerAnimNotifyState.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
 			"ToggleTraceNotifyState.cpp.obj",
 			"BTT_RageAttack.cpp.obj",
 			"BossCharacter.cpp.obj",
 			"EEnemyState.cpp.obj",
 			"EStat.cpp.obj",
+			"LookAtPlayerComponent.cpp.obj",
 			"MainCharacter.cpp.obj",
 			"PlayerActionsComponent.cpp.obj",
 			"StatsComponent.cpp.obj",
@@ -42,10 +46,8 @@
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
 			"AshenVanguard.init.gen.cpp.obj",
-			"LookAtPlayerAnimNotifyState.gen.cpp.obj",
-			"LookAtPlayerComponent.gen.cpp.obj",
-			"LookAtPlayerAnimNotifyState.cpp.obj",
-			"LookAtPlayerComponent.cpp.obj"
+			"EnemyProjectile.gen.cpp.obj",
+			"EnemyProjectile.cpp.obj"
 		]
 	}
 }

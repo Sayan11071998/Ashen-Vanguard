@@ -103,6 +103,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\CombatComponent.cpp">
       <Filter>Source\AshenVanguard\Private\Combat</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\EnemyProjectile.cpp">
+      <Filter>Source\AshenVanguard\Private\Combat</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\EnemyProjectileComponent.cpp">
       <Filter>Source\AshenVanguard\Private\Combat</Filter>
     </ClCompile>
@@ -182,6 +185,9 @@
       <Filter>Source\AshenVanguard\Public\Combat</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\CombatComponent.h">
+      <Filter>Source\AshenVanguard\Public\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\EnemyProjectile.h">
       <Filter>Source\AshenVanguard\Public\Combat</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\EnemyProjectileComponent.h">

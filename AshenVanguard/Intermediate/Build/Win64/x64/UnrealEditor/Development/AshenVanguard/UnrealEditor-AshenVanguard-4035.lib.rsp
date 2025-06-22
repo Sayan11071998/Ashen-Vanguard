@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-AshenVanguard-4035.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\sayan\Projects\Ashen-Vanguard\AshenVanguard\Intermediate\Build\Win64\x64\AshenVanguardEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderOldest.h.obj"
+"C:\Users\sayan\Projects\Ashen-Vanguard\AshenVanguard\Intermediate\Build\Win64\x64\UnrealEditor\Development\AshenVanguard\Module.AshenVanguard.cpp.obj"
+"C:\Users\sayan\Projects\Ashen-Vanguard\AshenVanguard\Intermediate\Build\Win64\x64\UnrealEditor\Development\AshenVanguard\EnemyProjectile.cpp.obj"
+"C:\Users\sayan\Projects\Ashen-Vanguard\AshenVanguard\Intermediate\Build\Win64\x64\UnrealEditor\Development\AshenVanguard\Default.rc2.res"
+/OUT:"C:\Users\sayan\Projects\Ashen-Vanguard\AshenVanguard\Intermediate\Build\Win64\x64\UnrealEditor\Development\AshenVanguard\UnrealEditor-AshenVanguard-4035.lib"
