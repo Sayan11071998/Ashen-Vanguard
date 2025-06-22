@@ -10,6 +10,7 @@
 			"CombatComponent.gen.cpp.obj",
 			"EEnemyState.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
+			"EnemyProjectileComponent.gen.cpp.obj",
 			"EStat.gen.cpp.obj",
 			"Fighter.gen.cpp.obj",
 			"LockonComponent.gen.cpp.obj",
@@ -25,6 +26,7 @@
 			"BossAnimInstance.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
 			"ToggleTraceNotifyState.cpp.obj",
+			"BTT_RageAttack.cpp.obj",
 			"BossCharacter.cpp.obj",
 			"EEnemyState.cpp.obj",
 			"EStat.cpp.obj",
@@ -39,7 +41,7 @@
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
-			"BTT_RageAttack.cpp.obj"
+			"EnemyProjectileComponent.cpp.obj"
 		]
 	}
 }

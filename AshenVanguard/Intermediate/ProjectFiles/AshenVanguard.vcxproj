@@ -303,6 +303,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\CombatComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\EnemyProjectileComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\LockonComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -331,6 +334,7 @@
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_RageAttack.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\BlockComponent.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\CombatComponent.h"/>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\EnemyProjectileComponent.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\LockonComponent.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\TraceComponent.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Interfaces\Enemy.h"/>
