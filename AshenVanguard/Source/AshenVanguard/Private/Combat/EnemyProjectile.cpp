@@ -2,6 +2,7 @@
 #include "Particles/ParticleSystemComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
+#include "Engine/DamageEvents.h"
 
 AEnemyProjectile::AEnemyProjectile()
 {
@@ -38,6 +39,10 @@ void AEnemyProjectile::HandleBeginOverlap(AActor* OtherActor)
 	);
 
 	FindComponentByClass<USphereComponent>()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	FDamageEvent ProjectileDamageEvent{};
+
+	PawnRef->TakeDamage(Damage, ProjectileDamageEvent, PawnRef->GetController(), this);
 }
 
 void AEnemyProjectile::DestroyProjectile()

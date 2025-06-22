@@ -11,6 +11,9 @@ class ASHENVANGUARD_API AEnemyProjectile : public AActor
 
 	UPROPERTY(EditAnywhere)
 	class UParticleSystem* HitTemplate;
+
+	UPROPERTY(EditAnyWhere)
+	float Damage{ 10.0f };
 	
 public:	
 	AEnemyProjectile();
