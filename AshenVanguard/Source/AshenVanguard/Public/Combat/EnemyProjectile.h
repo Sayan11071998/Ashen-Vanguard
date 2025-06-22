@@ -8,6 +8,9 @@ UCLASS()
 class ASHENVANGUARD_API AEnemyProjectile : public AActor
 {
 	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere)
+	class UParticleSystem* HitTemplate;
 	
 public:	
 	AEnemyProjectile();

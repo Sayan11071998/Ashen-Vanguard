@@ -1,4 +1,6 @@
 #include "Combat/EnemyProjectile.h"
+#include "Particles/ParticleSystemComponent.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 
 AEnemyProjectile::AEnemyProjectile()
 {
@@ -21,5 +23,7 @@ void AEnemyProjectile::HandleBeginOverlap(AActor* OtherActor)
 
 	if (!PawnRef->IsPlayerControlled()) { return; }
 
-	UE_LOG(LogTemp, Warning, TEXT("Overlapped With Player"));
+	FindComponentByClass<UParticleSystemComponent>()->SetTemplate(HitTemplate);
+
+	FindComponentByClass<UProjectileMovementComponent>()->StopMovementImmediately();
 }
