@@ -38,8 +38,14 @@ struct Z_Construct_UClass_ULookAtPlayerComponent_Statics
 		{ "Category", "LookAtPlayerComponent" },
 		{ "ModuleRelativePath", "Public/Characters/LookAtPlayerComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bcanRotate_MetaData[] = {
+		{ "Category", "LookAtPlayerComponent" },
+		{ "ModuleRelativePath", "Public/Characters/LookAtPlayerComponent.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Speed;
+	static void NewProp_bcanRotate_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bcanRotate;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -48,8 +54,14 @@ struct Z_Construct_UClass_ULookAtPlayerComponent_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ULookAtPlayerComponent_Statics::NewProp_Speed = { "Speed", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ULookAtPlayerComponent, Speed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Speed_MetaData), NewProp_Speed_MetaData) };
+void Z_Construct_UClass_ULookAtPlayerComponent_Statics::NewProp_bcanRotate_SetBit(void* Obj)
+{
+	((ULookAtPlayerComponent*)Obj)->bcanRotate = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ULookAtPlayerComponent_Statics::NewProp_bcanRotate = { "bcanRotate", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ULookAtPlayerComponent), &Z_Construct_UClass_ULookAtPlayerComponent_Statics::NewProp_bcanRotate_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bcanRotate_MetaData), NewProp_bcanRotate_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ULookAtPlayerComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ULookAtPlayerComponent_Statics::NewProp_Speed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ULookAtPlayerComponent_Statics::NewProp_bcanRotate,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ULookAtPlayerComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ULookAtPlayerComponent_Statics::DependentSingletons[])() = {
@@ -92,10 +104,10 @@ ULookAtPlayerComponent::~ULookAtPlayerComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_LookAtPlayerComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ULookAtPlayerComponent, ULookAtPlayerComponent::StaticClass, TEXT("ULookAtPlayerComponent"), &Z_Registration_Info_UClass_ULookAtPlayerComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULookAtPlayerComponent), 4236024009U) },
+		{ Z_Construct_UClass_ULookAtPlayerComponent, ULookAtPlayerComponent::StaticClass, TEXT("ULookAtPlayerComponent"), &Z_Registration_Info_UClass_ULookAtPlayerComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ULookAtPlayerComponent), 4183431664U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_LookAtPlayerComponent_h_340959083(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_LookAtPlayerComponent_h_1791537330(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_LookAtPlayerComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_LookAtPlayerComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

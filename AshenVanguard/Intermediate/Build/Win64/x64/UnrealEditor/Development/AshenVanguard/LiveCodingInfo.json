@@ -42,7 +42,9 @@
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
 			"AshenVanguard.init.gen.cpp.obj",
+			"LookAtPlayerAnimNotifyState.gen.cpp.obj",
 			"LookAtPlayerComponent.gen.cpp.obj",
+			"LookAtPlayerAnimNotifyState.cpp.obj",
 			"LookAtPlayerComponent.cpp.obj"
 		]
 	}

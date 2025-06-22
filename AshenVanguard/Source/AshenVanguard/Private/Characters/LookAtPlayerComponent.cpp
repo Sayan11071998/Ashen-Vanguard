@@ -15,6 +15,8 @@ void ULookAtPlayerComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	if (!bcanRotate) { return; }
+
 	AActor* OwnerRef{ GetOwner() };
 	FVector OwnerLocation{ OwnerRef->GetActorLocation() };
 

@@ -55,6 +55,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\BossAnimInstance.cpp">
       <Filter>Source\AshenVanguard\Private\Animations</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\LookAtPlayerAnimNotifyState.cpp">
+      <Filter>Source\AshenVanguard\Private\Animations</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\PlayerAnimInstance.cpp">
       <Filter>Source\AshenVanguard\Private\Animations</Filter>
     </ClCompile>
@@ -131,6 +134,9 @@
       <UniqueIdentifier>{BBB19684-CC73-3878-B17A-8E0FD7EF4300}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\BossAnimInstance.h">
+      <Filter>Source\AshenVanguard\Public\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\LookAtPlayerAnimNotifyState.h">
       <Filter>Source\AshenVanguard\Public\Animations</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\PlayerAnimInstance.h">

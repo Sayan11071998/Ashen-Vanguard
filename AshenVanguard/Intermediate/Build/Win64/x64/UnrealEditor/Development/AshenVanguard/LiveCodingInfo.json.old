@@ -2,7 +2,6 @@
 	"RemapUnityFiles": 
 	{
 		"Module.AshenVanguard.cpp.obj": [
-			"AshenVanguard.init.gen.cpp.obj",
 			"BlockComponent.gen.cpp.obj",
 			"BossAnimInstance.gen.cpp.obj",
 			"BossCharacter.gen.cpp.obj",
@@ -43,6 +42,9 @@
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
+			"AshenVanguard.init.gen.cpp.obj",
+			"LookAtPlayerAnimNotifyState.gen.cpp.obj",
+			"LookAtPlayerAnimNotifyState.cpp.obj",
 			"LookAtPlayerComponent.cpp.obj"
 		]
 	}

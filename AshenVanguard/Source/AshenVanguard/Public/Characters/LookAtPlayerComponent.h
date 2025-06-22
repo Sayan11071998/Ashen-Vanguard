@@ -15,6 +15,9 @@ class ASHENVANGUARD_API ULookAtPlayerComponent : public UActorComponent
 public:	
 	ULookAtPlayerComponent();
 
+	UPROPERTY(VisibleAnywhere)
+	bool bcanRotate{ false };
+
 protected:
 	virtual void BeginPlay() override;
 
