@@ -40,14 +40,14 @@
 			"StatsComponent.cpp.obj",
 			"BlockComponent.cpp.obj",
 			"CombatComponent.cpp.obj",
+			"EnemyProjectile.cpp.obj",
 			"EnemyProjectileComponent.cpp.obj",
 			"LockonComponent.cpp.obj",
 			"TraceComponent.cpp.obj",
 			"Enemy.cpp.obj",
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
-			"Throwaway.cpp.obj",
-			"EnemyProjectile.cpp.obj"
+			"Throwaway.cpp.obj"
 		]
 	}
 }

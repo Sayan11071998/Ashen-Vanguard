@@ -37,6 +37,7 @@
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/StatsComponent.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Combat/BlockComponent.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Combat/CombatComponent.cpp"
+#include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Combat/EnemyProjectile.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Combat/EnemyProjectileComponent.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Combat/LockonComponent.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Combat/TraceComponent.cpp"
