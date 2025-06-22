@@ -91,6 +91,9 @@
     <Filter Include="Source\AshenVanguard\Private\Characters\AI">
       <UniqueIdentifier>{961AAEF4-BFC3-34C2-9AA3-4BE99F2D1AB1}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTT_ChargeAttack.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters\AI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTT_RageAttack.cpp">
       <Filter>Source\AshenVanguard\Private\Characters\AI</Filter>
     </ClCompile>
@@ -175,6 +178,9 @@
     <Filter Include="Source\AshenVanguard\Public\Characters\AI">
       <UniqueIdentifier>{4FBA2923-2282-3FAA-B964-095AD29B2AA2}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_ChargeAttack.h">
+      <Filter>Source\AshenVanguard\Public\Characters\AI</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_RageAttack.h">
       <Filter>Source\AshenVanguard\Public\Characters\AI</Filter>
     </ClInclude>

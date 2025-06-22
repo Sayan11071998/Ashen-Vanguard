@@ -33,8 +33,12 @@ struct Z_Construct_UEnum_AshenVanguard_EEnemyState_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+		{ "Charge.DisplayName", "Charge" },
+		{ "Charge.Name", "Charge" },
 		{ "Idle.DisplayName", "Idle" },
 		{ "Idle.Name", "Idle" },
+		{ "Melle.DisplayName", "Melle" },
+		{ "Melle.Name", "Melle" },
 		{ "ModuleRelativePath", "Public/Characters/EEnemyState.h" },
 		{ "Range.DisplayName", "Range" },
 		{ "Range.Name", "Range" },
@@ -43,6 +47,8 @@ struct Z_Construct_UEnum_AshenVanguard_EEnemyState_Statics
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
 		{ "Idle", (int64)Idle },
 		{ "Range", (int64)Range },
+		{ "Charge", (int64)Charge },
+		{ "Melle", (int64)Melle },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -72,10 +78,10 @@ UEnum* Z_Construct_UEnum_AshenVanguard_EEnemyState()
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EEnemyState_StaticEnum, TEXT("EEnemyState"), &Z_Registration_Info_UEnum_EEnemyState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3776792638U) },
+		{ EEnemyState_StaticEnum, TEXT("EEnemyState"), &Z_Registration_Info_UEnum_EEnemyState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3692780449U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_2257368404(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_249802470(TEXT("/Script/AshenVanguard"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_Statics::EnumInfo));
