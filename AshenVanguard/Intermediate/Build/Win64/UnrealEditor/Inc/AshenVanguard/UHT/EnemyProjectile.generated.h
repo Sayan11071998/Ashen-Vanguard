@@ -16,6 +16,7 @@ class AActor;
 #define ASHENVANGUARD_EnemyProjectile_generated_h
 
 #define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_EnemyProjectile_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execDestroyProjectile); \
 	DECLARE_FUNCTION(execHandleBeginOverlap);
 
 

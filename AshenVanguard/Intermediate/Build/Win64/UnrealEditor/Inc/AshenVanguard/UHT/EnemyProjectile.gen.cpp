@@ -18,6 +18,35 @@ ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
 
+// Begin Class AEnemyProjectile Function DestroyProjectile
+struct Z_Construct_UFunction_AEnemyProjectile_DestroyProjectile_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Combat/EnemyProjectile.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEnemyProjectile_DestroyProjectile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEnemyProjectile, nullptr, "DestroyProjectile", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemyProjectile_DestroyProjectile_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEnemyProjectile_DestroyProjectile_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AEnemyProjectile_DestroyProjectile()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEnemyProjectile_DestroyProjectile_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AEnemyProjectile::execDestroyProjectile)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DestroyProjectile();
+	P_NATIVE_END;
+}
+// End Class AEnemyProjectile Function DestroyProjectile
+
 // Begin Class AEnemyProjectile Function HandleBeginOverlap
 struct Z_Construct_UFunction_AEnemyProjectile_HandleBeginOverlap_Statics
 {
@@ -65,6 +94,7 @@ void AEnemyProjectile::StaticRegisterNativesAEnemyProjectile()
 {
 	UClass* Class = AEnemyProjectile::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "DestroyProjectile", &AEnemyProjectile::execDestroyProjectile },
 		{ "HandleBeginOverlap", &AEnemyProjectile::execHandleBeginOverlap },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -90,6 +120,7 @@ struct Z_Construct_UClass_AEnemyProjectile_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AEnemyProjectile_DestroyProjectile, "DestroyProjectile" }, // 162179740
 		{ &Z_Construct_UFunction_AEnemyProjectile_HandleBeginOverlap, "HandleBeginOverlap" }, // 979520508
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -143,10 +174,10 @@ AEnemyProjectile::~AEnemyProjectile() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_EnemyProjectile_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEnemyProjectile, AEnemyProjectile::StaticClass, TEXT("AEnemyProjectile"), &Z_Registration_Info_UClass_AEnemyProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyProjectile), 3402472351U) },
+		{ Z_Construct_UClass_AEnemyProjectile, AEnemyProjectile::StaticClass, TEXT("AEnemyProjectile"), &Z_Registration_Info_UClass_AEnemyProjectile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyProjectile), 1901447672U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_EnemyProjectile_h_2988717643(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_EnemyProjectile_h_2966921890(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_EnemyProjectile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_EnemyProjectile_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -23,4 +23,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void HandleBeginOverlap(AActor* OtherActor);
+
+	UFUNCTION()
+	void DestroyProjectile();
 };
