@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AshenVanguardModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3cbea24848d00bc6264c5fdb94a624836996cee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7edc60c622aaaf4582c1e3a8d8dbab67b03bf930")]
 [assembly: System.Reflection.AssemblyProductAttribute("AshenVanguardModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AshenVanguardModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
