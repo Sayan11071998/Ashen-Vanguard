@@ -9,6 +9,7 @@
 			"CombatComponent.gen.cpp.obj",
 			"EEnemyState.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
+			"EnemyProjectileComponent.gen.cpp.obj",
 			"EStat.gen.cpp.obj",
 			"Fighter.gen.cpp.obj",
 			"LockonComponent.gen.cpp.obj",
@@ -33,6 +34,7 @@
 			"StatsComponent.cpp.obj",
 			"BlockComponent.cpp.obj",
 			"CombatComponent.cpp.obj",
+			"EnemyProjectileComponent.cpp.obj",
 			"LockonComponent.cpp.obj",
 			"TraceComponent.cpp.obj",
 			"Enemy.cpp.obj",
@@ -40,8 +42,8 @@
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
 			"AshenVanguard.init.gen.cpp.obj",
-			"EnemyProjectileComponent.gen.cpp.obj",
-			"EnemyProjectileComponent.cpp.obj"
+			"LookAtPlayerComponent.gen.cpp.obj",
+			"LookAtPlayerComponent.cpp.obj"
 		]
 	}
 }

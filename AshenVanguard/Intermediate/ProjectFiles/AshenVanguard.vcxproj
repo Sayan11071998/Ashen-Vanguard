@@ -285,6 +285,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\EStat.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\LookAtPlayerComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\MainCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -328,6 +331,7 @@
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\BossCharacter.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\EEnemyState.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\EStat.h"/>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\LookAtPlayerComponent.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\MainCharacter.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\PlayerActionsComponent.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\StatsComponent.h"/>

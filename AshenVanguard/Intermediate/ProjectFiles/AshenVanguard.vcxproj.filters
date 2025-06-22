@@ -73,6 +73,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\EStat.cpp">
       <Filter>Source\AshenVanguard\Private\Characters</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\LookAtPlayerComponent.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\MainCharacter.cpp">
       <Filter>Source\AshenVanguard\Private\Characters</Filter>
     </ClCompile>
@@ -146,6 +149,9 @@
       <Filter>Source\AshenVanguard\Public\Characters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\EStat.h">
+      <Filter>Source\AshenVanguard\Public\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\LookAtPlayerComponent.h">
       <Filter>Source\AshenVanguard\Public\Characters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\MainCharacter.h">
