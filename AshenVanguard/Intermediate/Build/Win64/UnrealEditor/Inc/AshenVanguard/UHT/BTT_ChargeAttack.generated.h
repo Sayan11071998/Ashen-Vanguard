@@ -24,8 +24,6 @@ public: \
 
 
 #define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_ChargeAttack_h_10_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UBTT_ChargeAttack(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UBTT_ChargeAttack(UBTT_ChargeAttack&&); \
@@ -33,7 +31,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UBTT_ChargeAttack); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UBTT_ChargeAttack); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UBTT_ChargeAttack) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UBTT_ChargeAttack) \
 	NO_API virtual ~UBTT_ChargeAttack();
 
 

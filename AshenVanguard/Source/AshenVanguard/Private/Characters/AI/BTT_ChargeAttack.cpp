@@ -2,6 +2,24 @@
 #include "AIController.h"
 #include "GameFramework/Character.h"
 #include "Animations/BossAnimInstance.h"
+#include "BehaviorTree/BlackboardComponent.h"
+
+void UBTT_ChargeAttack::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
+{
+	bool bIsReadyToCharge = OwnerComp.GetBlackboardComponent()->GetValueAsBool(TEXT("IsReadyToCharge"));
+
+	if (bIsReadyToCharge)
+	{
+		OwnerComp.GetBlackboardComponent()->SetValueAsFloat(TEXT("IsReadyToCharge"), false);
+
+		ChargetAtPlayer();
+	}
+}
+
+UBTT_ChargeAttack::UBTT_ChargeAttack()
+{
+	bNotifyTick = true;
+}
 
 EBTNodeResult::Type UBTT_ChargeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
@@ -11,5 +29,12 @@ EBTNodeResult::Type UBTT_ChargeAttack::ExecuteTask(UBehaviorTreeComponent& Owner
 
 	BossAnim->bIsCharging = true;
 
+	OwnerComp.GetBlackboardComponent()->SetValueAsBool(TEXT("IsReadyToCharge"), false);
+
 	return EBTNodeResult::InProgress;
+}
+
+void UBTT_ChargeAttack::ChargetAtPlayer()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Running"));
 }

@@ -71,7 +71,6 @@ template<> ASHENVANGUARD_API UClass* StaticClass<UBTT_ChargeAttack>()
 {
 	return UBTT_ChargeAttack::StaticClass();
 }
-UBTT_ChargeAttack::UBTT_ChargeAttack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UBTT_ChargeAttack);
 UBTT_ChargeAttack::~UBTT_ChargeAttack() {}
 // End Class UBTT_ChargeAttack
