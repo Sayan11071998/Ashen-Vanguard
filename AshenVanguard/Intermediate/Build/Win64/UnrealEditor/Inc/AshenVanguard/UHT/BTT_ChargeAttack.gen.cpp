@@ -16,9 +16,73 @@ ASHENVANGUARD_API UClass* Z_Construct_UClass_UBTT_ChargeAttack_NoRegister();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
 
+// Begin Class UBTT_ChargeAttack Function FinishAttackTask
+struct Z_Construct_UFunction_UBTT_ChargeAttack_FinishAttackTask_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Characters/AI/BTT_ChargeAttack.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBTT_ChargeAttack_FinishAttackTask_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBTT_ChargeAttack, nullptr, "FinishAttackTask", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBTT_ChargeAttack_FinishAttackTask_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBTT_ChargeAttack_FinishAttackTask_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UBTT_ChargeAttack_FinishAttackTask()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBTT_ChargeAttack_FinishAttackTask_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UBTT_ChargeAttack::execFinishAttackTask)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FinishAttackTask();
+	P_NATIVE_END;
+}
+// End Class UBTT_ChargeAttack Function FinishAttackTask
+
+// Begin Class UBTT_ChargeAttack Function HandleMoveCompleted
+struct Z_Construct_UFunction_UBTT_ChargeAttack_HandleMoveCompleted_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Characters/AI/BTT_ChargeAttack.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBTT_ChargeAttack_HandleMoveCompleted_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBTT_ChargeAttack, nullptr, "HandleMoveCompleted", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBTT_ChargeAttack_HandleMoveCompleted_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBTT_ChargeAttack_HandleMoveCompleted_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UBTT_ChargeAttack_HandleMoveCompleted()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBTT_ChargeAttack_HandleMoveCompleted_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UBTT_ChargeAttack::execHandleMoveCompleted)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleMoveCompleted();
+	P_NATIVE_END;
+}
+// End Class UBTT_ChargeAttack Function HandleMoveCompleted
+
 // Begin Class UBTT_ChargeAttack
 void UBTT_ChargeAttack::StaticRegisterNativesUBTT_ChargeAttack()
 {
+	UClass* Class = UBTT_ChargeAttack::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FinishAttackTask", &UBTT_ChargeAttack::execFinishAttackTask },
+		{ "HandleMoveCompleted", &UBTT_ChargeAttack::execHandleMoveCompleted },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UBTT_ChargeAttack);
 UClass* Z_Construct_UClass_UBTT_ChargeAttack_NoRegister()
@@ -40,6 +104,11 @@ struct Z_Construct_UClass_UBTT_ChargeAttack_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_AcceptableRadius;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UBTT_ChargeAttack_FinishAttackTask, "FinishAttackTask" }, // 1545905860
+		{ &Z_Construct_UFunction_UBTT_ChargeAttack_HandleMoveCompleted, "HandleMoveCompleted" }, // 3875184097
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UBTT_ChargeAttack>::IsAbstract,
 	};
@@ -60,11 +129,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UBTT_ChargeAttack_Stati
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UBTT_ChargeAttack_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UBTT_ChargeAttack_Statics::PropPointers),
 	0,
 	0x001000A0u,
@@ -90,10 +159,10 @@ UBTT_ChargeAttack::~UBTT_ChargeAttack() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_ChargeAttack_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTT_ChargeAttack, UBTT_ChargeAttack::StaticClass, TEXT("UBTT_ChargeAttack"), &Z_Registration_Info_UClass_UBTT_ChargeAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTT_ChargeAttack), 3674436776U) },
+		{ Z_Construct_UClass_UBTT_ChargeAttack, UBTT_ChargeAttack::StaticClass, TEXT("UBTT_ChargeAttack"), &Z_Registration_Info_UClass_UBTT_ChargeAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTT_ChargeAttack), 754914816U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_ChargeAttack_h_3147587100(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_ChargeAttack_h_2131632457(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_ChargeAttack_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_ChargeAttack_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
