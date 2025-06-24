@@ -15,6 +15,9 @@ class ASHENVANGUARD_API UBTT_ChargeAttack : public UBTTaskNode
 
 	class UBossAnimInstance* BossAnim;
 
+	UPROPERTY(EditAnywhere)
+	float AcceptableRadius{ 100.0f };
+
 protected:
 	virtual void TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
 
