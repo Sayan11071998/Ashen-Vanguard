@@ -20,6 +20,11 @@ class ASHENVANGUARD_API UBTT_ChargeAttack : public UBTTaskNode
 
 	FScriptDelegate MoveCompletedDelegate;
 
+	float OriginalWalkSpeed;
+
+	UPROPERTY(EditAnywhere)
+	float ChargeWalkSpeed{ 2000.0f };
+
 protected:
 	virtual void TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds) override;
 
