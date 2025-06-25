@@ -6,6 +6,7 @@
 			"BlockComponent.gen.cpp.obj",
 			"BossAnimInstance.gen.cpp.obj",
 			"BossCharacter.gen.cpp.obj",
+			"BTS_PlayerDistance.gen.cpp.obj",
 			"BTT_ChargeAttack.gen.cpp.obj",
 			"BTT_RageAttack.gen.cpp.obj",
 			"CombatComponent.gen.cpp.obj",
@@ -51,7 +52,8 @@
 			"Enemy.cpp.obj",
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
-			"Throwaway.cpp.obj"
+			"Throwaway.cpp.obj",
+			"BTS_PlayerDistance.cpp.obj"
 		]
 	}
 }

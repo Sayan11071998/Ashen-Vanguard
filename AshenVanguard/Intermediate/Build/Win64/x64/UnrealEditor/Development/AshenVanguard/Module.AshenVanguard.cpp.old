@@ -3,6 +3,7 @@
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/BlockComponent.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/BossAnimInstance.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/BossCharacter.gen.cpp"
+#include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/BTS_PlayerDistance.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/BTT_ChargeAttack.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/BTT_RageAttack.gen.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Intermediate/Build/Win64/UnrealEditor/Inc/AshenVanguard/UHT/CombatComponent.gen.cpp"

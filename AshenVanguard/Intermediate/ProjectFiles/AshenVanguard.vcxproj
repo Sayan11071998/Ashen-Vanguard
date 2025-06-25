@@ -300,6 +300,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\StatsComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTS_PlayerDistance.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTT_ChargeAttack.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -348,6 +351,7 @@
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\MainCharacter.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\PlayerActionsComponent.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\StatsComponent.h"/>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTS_PlayerDistance.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_ChargeAttack.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_RageAttack.h"/>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\BlockComponent.h"/>
