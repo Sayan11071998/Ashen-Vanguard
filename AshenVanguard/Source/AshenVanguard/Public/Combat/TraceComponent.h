@@ -2,8 +2,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Combat/FTraceSockets.h"
 #include "TraceComponent.generated.h"
-
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ASHENVANGUARD_API UTraceComponent : public UActorComponent
@@ -13,13 +13,7 @@ class ASHENVANGUARD_API UTraceComponent : public UActorComponent
 	USkeletalMeshComponent* SkeletalComp;
 
 	UPROPERTY(EditAnywhere)
-	FName Start;
-
-	UPROPERTY(EditAnywhere)
-	FName End;
-
-	UPROPERTY(EditAnywhere)
-	FName Rotation;
+	TArray<FTraceSockets> Sockets;
 	
 	UPROPERTY(EditAnywhere)
 	double BoxCollisionLength{ 30.0 };
