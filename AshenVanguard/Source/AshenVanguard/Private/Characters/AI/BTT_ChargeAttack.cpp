@@ -11,7 +11,7 @@ void UBTT_ChargeAttack::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 
 	if (bIsReadyToCharge)
 	{
-		OwnerComp.GetBlackboardComponent()->SetValueAsFloat(TEXT("IsReadyToCharge"), false);
+		OwnerComp.GetBlackboardComponent()->SetValueAsBool(TEXT("IsReadyToCharge"), false);
 
 		ChargetAtPlayer();
 	}
