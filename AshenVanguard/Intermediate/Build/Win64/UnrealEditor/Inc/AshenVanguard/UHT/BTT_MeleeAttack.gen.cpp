@@ -16,9 +16,43 @@ ASHENVANGUARD_API UClass* Z_Construct_UClass_UBTT_MeleeAttack_NoRegister();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
 
+// Begin Class UBTT_MeleeAttack Function FinishAttackTask
+struct Z_Construct_UFunction_UBTT_MeleeAttack_FinishAttackTask_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Characters/AI/BTT_MeleeAttack.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBTT_MeleeAttack_FinishAttackTask_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBTT_MeleeAttack, nullptr, "FinishAttackTask", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBTT_MeleeAttack_FinishAttackTask_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBTT_MeleeAttack_FinishAttackTask_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UBTT_MeleeAttack_FinishAttackTask()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBTT_MeleeAttack_FinishAttackTask_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UBTT_MeleeAttack::execFinishAttackTask)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FinishAttackTask();
+	P_NATIVE_END;
+}
+// End Class UBTT_MeleeAttack Function FinishAttackTask
+
 // Begin Class UBTT_MeleeAttack
 void UBTT_MeleeAttack::StaticRegisterNativesUBTT_MeleeAttack()
 {
+	UClass* Class = UBTT_MeleeAttack::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FinishAttackTask", &UBTT_MeleeAttack::execFinishAttackTask },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UBTT_MeleeAttack);
 UClass* Z_Construct_UClass_UBTT_MeleeAttack_NoRegister()
@@ -45,6 +79,10 @@ struct Z_Construct_UClass_UBTT_MeleeAttack_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_AcceptableRadius;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UBTT_MeleeAttack_FinishAttackTask, "FinishAttackTask" }, // 4153160804
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UBTT_MeleeAttack>::IsAbstract,
 	};
@@ -67,11 +105,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UBTT_MeleeAttack_Static
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UBTT_MeleeAttack_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UBTT_MeleeAttack_Statics::PropPointers),
 	0,
 	0x001000A0u,
@@ -89,7 +127,6 @@ template<> ASHENVANGUARD_API UClass* StaticClass<UBTT_MeleeAttack>()
 {
 	return UBTT_MeleeAttack::StaticClass();
 }
-UBTT_MeleeAttack::UBTT_MeleeAttack(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UBTT_MeleeAttack);
 UBTT_MeleeAttack::~UBTT_MeleeAttack() {}
 // End Class UBTT_MeleeAttack
@@ -98,10 +135,10 @@ UBTT_MeleeAttack::~UBTT_MeleeAttack() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_MeleeAttack_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTT_MeleeAttack, UBTT_MeleeAttack::StaticClass, TEXT("UBTT_MeleeAttack"), &Z_Registration_Info_UClass_UBTT_MeleeAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTT_MeleeAttack), 2759971890U) },
+		{ Z_Construct_UClass_UBTT_MeleeAttack, UBTT_MeleeAttack::StaticClass, TEXT("UBTT_MeleeAttack"), &Z_Registration_Info_UClass_UBTT_MeleeAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTT_MeleeAttack), 432685117U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_MeleeAttack_h_3372332278(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_MeleeAttack_h_2123890194(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_MeleeAttack_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_MeleeAttack_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

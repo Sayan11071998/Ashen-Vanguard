@@ -30,7 +30,7 @@
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Animations/PlayerAnimInstance.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Animations/ToggleTraceNotifyState.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/AI/BTS_PlayerDistance.cpp"
-#include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/AI/BTT_ChargeAttack.cpp"
+#include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/AI/BTT_RageAttack.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/BossCharacter.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/EEnemyState.cpp"
 #include "C:/Users/sayan/Projects/Ashen-Vanguard/AshenVanguard/Source/AshenVanguard/Private/Characters/EStat.cpp"
