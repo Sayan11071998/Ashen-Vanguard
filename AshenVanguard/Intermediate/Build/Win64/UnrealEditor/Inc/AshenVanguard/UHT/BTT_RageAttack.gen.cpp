@@ -37,8 +37,13 @@ struct Z_Construct_UClass_UBTT_RageAttack_Statics
 		{ "Category", "BTT_RageAttack" },
 		{ "ModuleRelativePath", "Public/Characters/AI/BTT_RageAttack.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MeleeRange_MetaData[] = {
+		{ "Category", "BTT_RageAttack" },
+		{ "ModuleRelativePath", "Public/Characters/AI/BTT_RageAttack.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AnimMontage;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MeleeRange;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -47,8 +52,10 @@ struct Z_Construct_UClass_UBTT_RageAttack_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UBTT_RageAttack_Statics::NewProp_AnimMontage = { "AnimMontage", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBTT_RageAttack, AnimMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AnimMontage_MetaData), NewProp_AnimMontage_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBTT_RageAttack_Statics::NewProp_MeleeRange = { "MeleeRange", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBTT_RageAttack, MeleeRange), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeleeRange_MetaData), NewProp_MeleeRange_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UBTT_RageAttack_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBTT_RageAttack_Statics::NewProp_AnimMontage,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBTT_RageAttack_Statics::NewProp_MeleeRange,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UBTT_RageAttack_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UBTT_RageAttack_Statics::DependentSingletons[])() = {
@@ -92,10 +99,10 @@ UBTT_RageAttack::~UBTT_RageAttack() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_RageAttack_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBTT_RageAttack, UBTT_RageAttack::StaticClass, TEXT("UBTT_RageAttack"), &Z_Registration_Info_UClass_UBTT_RageAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTT_RageAttack), 1424215103U) },
+		{ Z_Construct_UClass_UBTT_RageAttack, UBTT_RageAttack::StaticClass, TEXT("UBTT_RageAttack"), &Z_Registration_Info_UClass_UBTT_RageAttack, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBTT_RageAttack), 2950245357U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_RageAttack_h_2160584655(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_RageAttack_h_843612585(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_RageAttack_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_AI_BTT_RageAttack_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

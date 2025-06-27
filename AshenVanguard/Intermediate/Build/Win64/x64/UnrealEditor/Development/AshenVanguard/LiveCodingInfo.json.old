@@ -2,7 +2,6 @@
 	"RemapUnityFiles": 
 	{
 		"Module.AshenVanguard.cpp.obj": [
-			"AshenVanguard.init.gen.cpp.obj",
 			"BlockComponent.gen.cpp.obj",
 			"BossAnimInstance.gen.cpp.obj",
 			"BossCharacter.gen.cpp.obj",
@@ -33,8 +32,7 @@
 			"LookAtPlayerAnimNotifyState.cpp.obj",
 			"PlayerAnimInstance.cpp.obj",
 			"ToggleTraceNotifyState.cpp.obj",
-			"BTT_ChargeAttack.cpp.obj",
-			"BTT_RageAttack.cpp.obj",
+			"BTS_PlayerDistance.cpp.obj",
 			"BossCharacter.cpp.obj",
 			"EEnemyState.cpp.obj",
 			"EStat.cpp.obj",
@@ -53,7 +51,11 @@
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
-			"BTS_PlayerDistance.cpp.obj"
+			"AshenVanguard.init.gen.cpp.obj",
+			"BTT_MeleeAttack.gen.cpp.obj",
+			"BTT_ChargeAttack.cpp.obj",
+			"BTT_MeleeAttack.cpp.obj",
+			"BTT_RageAttack.cpp.obj"
 		]
 	}
 }

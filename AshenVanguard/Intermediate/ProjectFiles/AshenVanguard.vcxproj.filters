@@ -97,6 +97,9 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTT_ChargeAttack.cpp">
       <Filter>Source\AshenVanguard\Private\Characters\AI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTT_MeleeAttack.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters\AI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTT_RageAttack.cpp">
       <Filter>Source\AshenVanguard\Private\Characters\AI</Filter>
     </ClCompile>
@@ -188,6 +191,9 @@
       <Filter>Source\AshenVanguard\Public\Characters\AI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_ChargeAttack.h">
+      <Filter>Source\AshenVanguard\Public\Characters\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_MeleeAttack.h">
       <Filter>Source\AshenVanguard\Public\Characters\AI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_RageAttack.h">
