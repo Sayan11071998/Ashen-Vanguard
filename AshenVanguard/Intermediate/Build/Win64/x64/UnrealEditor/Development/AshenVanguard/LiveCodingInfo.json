@@ -7,6 +7,7 @@
 			"BossCharacter.gen.cpp.obj",
 			"BTS_PlayerDistance.gen.cpp.obj",
 			"BTT_ChargeAttack.gen.cpp.obj",
+			"BTT_RageAttack.gen.cpp.obj",
 			"CombatComponent.gen.cpp.obj",
 			"EEnemyState.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
@@ -32,6 +33,7 @@
 			"PlayerAnimInstance.cpp.obj",
 			"ToggleTraceNotifyState.cpp.obj",
 			"BTS_PlayerDistance.cpp.obj",
+			"BTT_ChargeAttack.cpp.obj",
 			"BossCharacter.cpp.obj",
 			"EEnemyState.cpp.obj",
 			"EStat.cpp.obj",
@@ -52,8 +54,6 @@
 			"Throwaway.cpp.obj",
 			"AshenVanguard.init.gen.cpp.obj",
 			"BTT_MeleeAttack.gen.cpp.obj",
-			"BTT_RageAttack.gen.cpp.obj",
-			"BTT_ChargeAttack.cpp.obj",
 			"BTT_MeleeAttack.cpp.obj",
 			"BTT_RageAttack.cpp.obj"
 		]

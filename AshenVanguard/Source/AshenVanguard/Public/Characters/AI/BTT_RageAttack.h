@@ -15,7 +15,7 @@ class ASHENVANGUARD_API UBTT_RageAttack : public UBTTaskNode
 	double Threshold{ 0.9 };
 
 	UPROPERTY(EditAnywhere)
-	float MeleeRange{ 1250.f };
+	float MeleeRange{ 1250.0f };
 	
 public:
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
