@@ -16,4 +16,6 @@ class ASHENVANGUARD_API IFighter
 
 public:
 	virtual float GetDamage() { return 0.0f; }
+
+	virtual void Attack() {}
 };
