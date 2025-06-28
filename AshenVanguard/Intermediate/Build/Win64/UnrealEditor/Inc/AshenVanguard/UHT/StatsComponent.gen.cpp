@@ -46,6 +46,57 @@ DEFINE_FUNCTION(UStatsComponent::execEnableRegen)
 }
 // End Class UStatsComponent Function EnableRegen
 
+// Begin Class UStatsComponent Function GetStatPercentage
+struct Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics
+{
+	struct StatsComponent_eventGetStatPercentage_Parms
+	{
+		TEnumAsByte<EStat> Current;
+		TEnumAsByte<EStat> Max;
+		float ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Characters/StatsComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Current;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_Max;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::NewProp_Current = { "Current", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StatsComponent_eventGetStatPercentage_Parms, Current), Z_Construct_UEnum_AshenVanguard_EStat, METADATA_PARAMS(0, nullptr) }; // 1997521154
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::NewProp_Max = { "Max", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StatsComponent_eventGetStatPercentage_Parms, Max), Z_Construct_UEnum_AshenVanguard_EStat, METADATA_PARAMS(0, nullptr) }; // 1997521154
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StatsComponent_eventGetStatPercentage_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::NewProp_Current,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::NewProp_Max,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStatsComponent, nullptr, "GetStatPercentage", nullptr, nullptr, Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::StatsComponent_eventGetStatPercentage_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::StatsComponent_eventGetStatPercentage_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UStatsComponent_GetStatPercentage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UStatsComponent_GetStatPercentage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UStatsComponent::execGetStatPercentage)
+{
+	P_GET_PROPERTY(FByteProperty,Z_Param_Current);
+	P_GET_PROPERTY(FByteProperty,Z_Param_Max);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetStatPercentage(EStat(Z_Param_Current),EStat(Z_Param_Max));
+	P_NATIVE_END;
+}
+// End Class UStatsComponent Function GetStatPercentage
+
 // Begin Class UStatsComponent Function ReduceHealth
 struct Z_Construct_UFunction_UStatsComponent_ReduceHealth_Statics
 {
@@ -165,6 +216,7 @@ void UStatsComponent::StaticRegisterNativesUStatsComponent()
 	UClass* Class = UStatsComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "EnableRegen", &UStatsComponent::execEnableRegen },
+		{ "GetStatPercentage", &UStatsComponent::execGetStatPercentage },
 		{ "ReduceHealth", &UStatsComponent::execReduceHealth },
 		{ "ReduceStamina", &UStatsComponent::execReduceStamina },
 		{ "RegenStamina", &UStatsComponent::execRegenStamina },
@@ -213,6 +265,7 @@ struct Z_Construct_UClass_UStatsComponent_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UStatsComponent_EnableRegen, "EnableRegen" }, // 2946179557
+		{ &Z_Construct_UFunction_UStatsComponent_GetStatPercentage, "GetStatPercentage" }, // 1685450969
 		{ &Z_Construct_UFunction_UStatsComponent_ReduceHealth, "ReduceHealth" }, // 3385228115
 		{ &Z_Construct_UFunction_UStatsComponent_ReduceStamina, "ReduceStamina" }, // 119628760
 		{ &Z_Construct_UFunction_UStatsComponent_RegenStamina, "RegenStamina" }, // 1133475283
@@ -282,10 +335,10 @@ UStatsComponent::~UStatsComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UStatsComponent, UStatsComponent::StaticClass, TEXT("UStatsComponent"), &Z_Registration_Info_UClass_UStatsComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatsComponent), 3426749655U) },
+		{ Z_Construct_UClass_UStatsComponent, UStatsComponent::StaticClass, TEXT("UStatsComponent"), &Z_Registration_Info_UClass_UStatsComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatsComponent), 1974063982U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_3613124661(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_3239489809(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
