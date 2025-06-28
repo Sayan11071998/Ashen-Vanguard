@@ -1,9 +1,9 @@
 #include "Characters/AI/BTT_MeleeAttack.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "AIController.h"
-#include "Navigation/PathFollowingComponent.h"
 #include "Interfaces/Fighter.h"
 #include "GameFramework/Character.h"
+#include "Navigation/PathFollowingComponent.h"
 
 EBTNodeResult::Type UBTT_MeleeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
@@ -34,7 +34,7 @@ EBTNodeResult::Type UBTT_MeleeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerC
 
 void UBTT_MeleeAttack::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
 {
-	if (bIsFinished)
+	if (!bIsFinished)
 	{
 		return;
 	}
