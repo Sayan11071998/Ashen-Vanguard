@@ -27,6 +27,8 @@ void UStatsComponent::ReduceHealth(float Amount)
 		0,
 		Stats[EStat::MaxHealth]
 	);
+
+	OnHealthPercentUpdateDelegate.Broadcast(GetStatPercentage(EStat::Health, EStat::MaxHealth));
 }
 
 void UStatsComponent::ReduceStamina(float Amount)
@@ -52,6 +54,8 @@ void UStatsComponent::ReduceStamina(float Amount)
 		StaminaDelayDuration,
 		FunctionInfo
 	);
+
+	OnStaminaPercentUpdateDelegate.Broadcast(GetStatPercentage(EStat::Stamina, EStat::MaxStamina));
 }
 
 void UStatsComponent::RegenStamina()
@@ -64,6 +68,8 @@ void UStatsComponent::RegenStamina()
 		GetWorld()->DeltaTimeSeconds,
 		StaminaRegenRate
 	);
+
+	OnStaminaPercentUpdateDelegate.Broadcast(GetStatPercentage(EStat::Stamina, EStat::MaxStamina));
 }
 
 void UStatsComponent::EnableRegen()

@@ -13,9 +13,99 @@ void EmptyLinkFunctionForGeneratedCodeStatsComponent() {}
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UStatsComponent();
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UStatsComponent_NoRegister();
 ASHENVANGUARD_API UEnum* Z_Construct_UEnum_AshenVanguard_EStat();
+ASHENVANGUARD_API UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature();
+ASHENVANGUARD_API UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
+
+// Begin Delegate FOnHealthPercentUpdateSignature
+struct Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics
+{
+	struct _Script_AshenVanguard_eventOnHealthPercentUpdateSignature_Parms
+	{
+		float Percentage;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Characters/StatsComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_Percentage;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::NewProp_Percentage = { "Percentage", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_AshenVanguard_eventOnHealthPercentUpdateSignature_Parms, Percentage), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::NewProp_Percentage,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_AshenVanguard, nullptr, "OnHealthPercentUpdateSignature__DelegateSignature", "StatsComponent", "OnHealthPercentUpdateDelegate", Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::_Script_AshenVanguard_eventOnHealthPercentUpdateSignature_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::_Script_AshenVanguard_eventOnHealthPercentUpdateSignature_Parms) < MAX_uint16);
+UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FOnHealthPercentUpdateSignature_DelegateWrapper(const FMulticastScriptDelegate& OnHealthPercentUpdateSignature, float Percentage)
+{
+	struct _Script_AshenVanguard_eventOnHealthPercentUpdateSignature_Parms
+	{
+		float Percentage;
+	};
+	_Script_AshenVanguard_eventOnHealthPercentUpdateSignature_Parms Parms;
+	Parms.Percentage=Percentage;
+	OnHealthPercentUpdateSignature.ProcessMulticastDelegate<UObject>(&Parms);
+}
+// End Delegate FOnHealthPercentUpdateSignature
+
+// Begin Delegate FOnStaminaPercentUpdateSignature
+struct Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics
+{
+	struct _Script_AshenVanguard_eventOnStaminaPercentUpdateSignature_Parms
+	{
+		float Percentage;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Characters/StatsComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_Percentage;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::NewProp_Percentage = { "Percentage", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_AshenVanguard_eventOnStaminaPercentUpdateSignature_Parms, Percentage), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::NewProp_Percentage,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_AshenVanguard, nullptr, "OnStaminaPercentUpdateSignature__DelegateSignature", "StatsComponent", "OnStaminaPercentUpdateDelegate", Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::_Script_AshenVanguard_eventOnStaminaPercentUpdateSignature_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::_Script_AshenVanguard_eventOnStaminaPercentUpdateSignature_Parms) < MAX_uint16);
+UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FOnStaminaPercentUpdateSignature_DelegateWrapper(const FMulticastScriptDelegate& OnStaminaPercentUpdateSignature, float Percentage)
+{
+	struct _Script_AshenVanguard_eventOnStaminaPercentUpdateSignature_Parms
+	{
+		float Percentage;
+	};
+	_Script_AshenVanguard_eventOnStaminaPercentUpdateSignature_Parms Parms;
+	Parms.Percentage=Percentage;
+	OnStaminaPercentUpdateSignature.ProcessMulticastDelegate<UObject>(&Parms);
+}
+// End Delegate FOnStaminaPercentUpdateSignature
 
 // Begin Class UStatsComponent Function EnableRegen
 struct Z_Construct_UFunction_UStatsComponent_EnableRegen_Statics
@@ -253,6 +343,12 @@ struct Z_Construct_UClass_UStatsComponent_Statics
 		{ "Category", "StatsComponent" },
 		{ "ModuleRelativePath", "Public/Characters/StatsComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnHealthPercentUpdateDelegate_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Characters/StatsComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnStaminaPercentUpdateDelegate_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Characters/StatsComponent.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_StaminaRegenRate;
 	static void NewProp_bCanRegen_SetBit(void* Obj);
@@ -261,6 +357,8 @@ struct Z_Construct_UClass_UStatsComponent_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_Stats_ValueProp;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Stats_Key_KeyProp;
 	static const UECodeGen_Private::FMapPropertyParams NewProp_Stats;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnHealthPercentUpdateDelegate;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnStaminaPercentUpdateDelegate;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -286,6 +384,8 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatsComponent
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatsComponent_Statics::NewProp_Stats_ValueProp = { "Stats", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UStatsComponent_Statics::NewProp_Stats_Key_KeyProp = { "Stats_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_AshenVanguard_EStat, METADATA_PARAMS(0, nullptr) }; // 1997521154
 const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UStatsComponent_Statics::NewProp_Stats = { "Stats", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatsComponent, Stats), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Stats_MetaData), NewProp_Stats_MetaData) }; // 1997521154
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStatsComponent_Statics::NewProp_OnHealthPercentUpdateDelegate = { "OnHealthPercentUpdateDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::SparseMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatsComponent, OnHealthPercentUpdateDelegate), Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnHealthPercentUpdateDelegate_MetaData), NewProp_OnHealthPercentUpdateDelegate_MetaData) }; // 2249563091
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UStatsComponent_Statics::NewProp_OnStaminaPercentUpdateDelegate = { "OnStaminaPercentUpdateDelegate", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::SparseMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatsComponent, OnStaminaPercentUpdateDelegate), Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnStaminaPercentUpdateDelegate_MetaData), NewProp_OnStaminaPercentUpdateDelegate_MetaData) }; // 799874353
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStatsComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatsComponent_Statics::NewProp_StaminaRegenRate,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatsComponent_Statics::NewProp_bCanRegen,
@@ -293,6 +393,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStatsCom
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatsComponent_Statics::NewProp_Stats_ValueProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatsComponent_Statics::NewProp_Stats_Key_KeyProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatsComponent_Statics::NewProp_Stats,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatsComponent_Statics::NewProp_OnHealthPercentUpdateDelegate,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatsComponent_Statics::NewProp_OnStaminaPercentUpdateDelegate,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UStatsComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UStatsComponent_Statics::DependentSingletons[])() = {
@@ -335,10 +437,10 @@ UStatsComponent::~UStatsComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UStatsComponent, UStatsComponent::StaticClass, TEXT("UStatsComponent"), &Z_Registration_Info_UClass_UStatsComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatsComponent), 1974063982U) },
+		{ Z_Construct_UClass_UStatsComponent, UStatsComponent::StaticClass, TEXT("UStatsComponent"), &Z_Registration_Info_UClass_UStatsComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatsComponent), 1248232435U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_3239489809(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_1510206350(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_StatsComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
