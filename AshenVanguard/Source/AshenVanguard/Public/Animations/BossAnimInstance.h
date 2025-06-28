@@ -11,7 +11,10 @@ class ASHENVANGUARD_API UBossAnimInstance : public UAnimInstance
 
 protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	float currentSpeed{ 0.0f };
+	float CurrentSpeed{ 0.0f };
+
+	UFUNCTION(BlueprintCallable)
+	void UpdateSpeed();
 
 public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)

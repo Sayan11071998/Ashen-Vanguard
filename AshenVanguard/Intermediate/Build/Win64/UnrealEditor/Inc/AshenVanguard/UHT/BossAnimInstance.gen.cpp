@@ -17,9 +17,43 @@ ENGINE_API UClass* Z_Construct_UClass_UAnimInstance();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
 
+// Begin Class UBossAnimInstance Function UpdateSpeed
+struct Z_Construct_UFunction_UBossAnimInstance_UpdateSpeed_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Animations/BossAnimInstance.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UBossAnimInstance_UpdateSpeed_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UBossAnimInstance, nullptr, "UpdateSpeed", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UBossAnimInstance_UpdateSpeed_Statics::Function_MetaDataParams), Z_Construct_UFunction_UBossAnimInstance_UpdateSpeed_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UBossAnimInstance_UpdateSpeed()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UBossAnimInstance_UpdateSpeed_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UBossAnimInstance::execUpdateSpeed)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateSpeed();
+	P_NATIVE_END;
+}
+// End Class UBossAnimInstance Function UpdateSpeed
+
 // Begin Class UBossAnimInstance
 void UBossAnimInstance::StaticRegisterNativesUBossAnimInstance()
 {
+	UClass* Class = UBossAnimInstance::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "UpdateSpeed", &UBossAnimInstance::execUpdateSpeed },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UBossAnimInstance);
 UClass* Z_Construct_UClass_UBossAnimInstance_NoRegister()
@@ -34,7 +68,7 @@ struct Z_Construct_UClass_UBossAnimInstance_Statics
 		{ "IncludePath", "Animations/BossAnimInstance.h" },
 		{ "ModuleRelativePath", "Public/Animations/BossAnimInstance.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_currentSpeed_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentSpeed_MetaData[] = {
 		{ "Category", "BossAnimInstance" },
 		{ "ModuleRelativePath", "Public/Animations/BossAnimInstance.h" },
 	};
@@ -43,24 +77,28 @@ struct Z_Construct_UClass_UBossAnimInstance_Statics
 		{ "ModuleRelativePath", "Public/Animations/BossAnimInstance.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FFloatPropertyParams NewProp_currentSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentSpeed;
 	static void NewProp_bIsCharging_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsCharging;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UBossAnimInstance_UpdateSpeed, "UpdateSpeed" }, // 1689617625
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UBossAnimInstance>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBossAnimInstance_Statics::NewProp_currentSpeed = { "currentSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBossAnimInstance, currentSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_currentSpeed_MetaData), NewProp_currentSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UBossAnimInstance_Statics::NewProp_CurrentSpeed = { "CurrentSpeed", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UBossAnimInstance, CurrentSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentSpeed_MetaData), NewProp_CurrentSpeed_MetaData) };
 void Z_Construct_UClass_UBossAnimInstance_Statics::NewProp_bIsCharging_SetBit(void* Obj)
 {
 	((UBossAnimInstance*)Obj)->bIsCharging = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UBossAnimInstance_Statics::NewProp_bIsCharging = { "bIsCharging", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UBossAnimInstance), &Z_Construct_UClass_UBossAnimInstance_Statics::NewProp_bIsCharging_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsCharging_MetaData), NewProp_bIsCharging_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UBossAnimInstance_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBossAnimInstance_Statics::NewProp_currentSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBossAnimInstance_Statics::NewProp_CurrentSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UBossAnimInstance_Statics::NewProp_bIsCharging,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UBossAnimInstance_Statics::PropPointers) < 2048);
@@ -74,11 +112,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UBossAnimInstance_Stati
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UBossAnimInstance_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UBossAnimInstance_Statics::PropPointers),
 	0,
 	0x009000A8u,
@@ -105,10 +143,10 @@ UBossAnimInstance::~UBossAnimInstance() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_BossAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBossAnimInstance, UBossAnimInstance::StaticClass, TEXT("UBossAnimInstance"), &Z_Registration_Info_UClass_UBossAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBossAnimInstance), 732780552U) },
+		{ Z_Construct_UClass_UBossAnimInstance, UBossAnimInstance::StaticClass, TEXT("UBossAnimInstance"), &Z_Registration_Info_UClass_UBossAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBossAnimInstance), 3503973582U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_BossAnimInstance_h_3347063309(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_BossAnimInstance_h_2571876129(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_BossAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Animations_BossAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
