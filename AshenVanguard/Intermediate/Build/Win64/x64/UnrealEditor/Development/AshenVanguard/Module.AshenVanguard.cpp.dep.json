@@ -184,7 +184,6 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
-            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\characters\\bosscharacter.cpp",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\characters\\eenemystate.cpp",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\characters\\estat.cpp",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\characters\\lookatplayercomponent.cpp",
@@ -194,7 +193,6 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\combat\\blockcomponent.cpp",
-            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\combat\\combatcomponent.cpp",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\combat\\enemyprojectile.cpp",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\particles\\particlesystemcomponent.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\particles\\particlesystem.h",
@@ -218,7 +216,6 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\springarmcomponent.generated.h",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\combat\\tracecomponent.cpp",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\interfaces\\enemy.cpp",
-            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\interfaces\\fighter.cpp",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\interfaces\\mainplayer.cpp",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\private\\throwaway.cpp"
         ],

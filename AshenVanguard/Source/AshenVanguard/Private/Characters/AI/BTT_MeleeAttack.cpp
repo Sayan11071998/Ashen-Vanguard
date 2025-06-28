@@ -11,6 +11,8 @@ EBTNodeResult::Type UBTT_MeleeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerC
 
 	float Distance{ OwnerComp.GetBlackboardComponent()->GetValueAsFloat(TEXT("Distance")) };
 
+	AAIController* AIRef{ OwnerComp.GetAIOwner() };
+
 	if (Distance > AttackRadius)
 	{
 		APawn* PlayerRef{ GetWorld()->GetFirstPlayerController()->GetPawn() };
@@ -18,15 +20,24 @@ EBTNodeResult::Type UBTT_MeleeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerC
 		MoveRequest.SetUsePathfinding(true);
 		MoveRequest.SetAcceptanceRadius(AcceptableRadius);
 
-		OwnerComp.GetAIOwner()->ReceiveMoveCompleted.AddUnique(MoveDelegate);
+		AIRef->ReceiveMoveCompleted.AddUnique(MoveDelegate);
 
-		OwnerComp.GetAIOwner()->MoveTo(MoveRequest);
-		OwnerComp.GetAIOwner()->SetFocus(PlayerRef);
+		AIRef->MoveTo(MoveRequest);
+		AIRef->SetFocus(PlayerRef);
 	}
 	else
 	{
-		IFighter* FighterRef{ Cast<IFighter>(OwnerComp.GetAIOwner()->GetCharacter()) };
+		IFighter* FighterRef{ Cast<IFighter>(AIRef->GetCharacter()) };
 		FighterRef->Attack();
+
+		FTimerHandle AttackTimerHandle;
+		AIRef->GetCharacter()->GetWorldTimerManager().SetTimer(
+			AttackTimerHandle,
+			this,
+			&UBTT_MeleeAttack::FinishAttackTask,
+			FighterRef->GetAnimationDuration(),
+			false
+		);
 	}
 
 	return EBTNodeResult::InProgress;
