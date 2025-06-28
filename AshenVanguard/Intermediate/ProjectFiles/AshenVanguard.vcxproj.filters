@@ -52,6 +52,12 @@
     <Filter Include="Source\AshenVanguard\Private\Animations">
       <UniqueIdentifier>{83EFA15F-3651-3594-B54E-C54BF2965406}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\BossAnimInstance.cpp">
+      <Filter>Source\AshenVanguard\Private\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\LookAtPlayerAnimNotifyState.cpp">
+      <Filter>Source\AshenVanguard\Private\Animations</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Animations\PlayerAnimInstance.cpp">
       <Filter>Source\AshenVanguard\Private\Animations</Filter>
     </ClCompile>
@@ -64,7 +70,13 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\BossCharacter.cpp">
       <Filter>Source\AshenVanguard\Private\Characters</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\EEnemyState.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\EStat.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\LookAtPlayerComponent.cpp">
       <Filter>Source\AshenVanguard\Private\Characters</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\MainCharacter.cpp">
@@ -76,6 +88,21 @@
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\StatsComponent.cpp">
       <Filter>Source\AshenVanguard\Private\Characters</Filter>
     </ClCompile>
+    <Filter Include="Source\AshenVanguard\Private\Characters\AI">
+      <UniqueIdentifier>{961AAEF4-BFC3-34C2-9AA3-4BE99F2D1AB1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTS_PlayerDistance.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTT_ChargeAttack.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTT_MeleeAttack.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Characters\AI\BTT_RageAttack.cpp">
+      <Filter>Source\AshenVanguard\Private\Characters\AI</Filter>
+    </ClCompile>
     <Filter Include="Source\AshenVanguard\Private\Combat">
       <UniqueIdentifier>{640BC476-5838-38B9-83B6-F39D0E851F1B}</UniqueIdentifier>
     </Filter>
@@ -83,6 +110,15 @@
       <Filter>Source\AshenVanguard\Private\Combat</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\CombatComponent.cpp">
+      <Filter>Source\AshenVanguard\Private\Combat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\EnemyProjectile.cpp">
+      <Filter>Source\AshenVanguard\Private\Combat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\EnemyProjectileComponent.cpp">
+      <Filter>Source\AshenVanguard\Private\Combat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\FTraceSockets.cpp">
       <Filter>Source\AshenVanguard\Private\Combat</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\AshenVanguard\Private\Combat\LockonComponent.cpp">
@@ -112,6 +148,12 @@
     <Filter Include="Source\AshenVanguard\Public\Animations">
       <UniqueIdentifier>{BBB19684-CC73-3878-B17A-8E0FD7EF4300}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\BossAnimInstance.h">
+      <Filter>Source\AshenVanguard\Public\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\LookAtPlayerAnimNotifyState.h">
+      <Filter>Source\AshenVanguard\Public\Animations</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Animations\PlayerAnimInstance.h">
       <Filter>Source\AshenVanguard\Public\Animations</Filter>
     </ClInclude>
@@ -124,7 +166,13 @@
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\BossCharacter.h">
       <Filter>Source\AshenVanguard\Public\Characters</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\EEnemyState.h">
+      <Filter>Source\AshenVanguard\Public\Characters</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\EStat.h">
+      <Filter>Source\AshenVanguard\Public\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\LookAtPlayerComponent.h">
       <Filter>Source\AshenVanguard\Public\Characters</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\MainCharacter.h">
@@ -136,6 +184,21 @@
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\StatsComponent.h">
       <Filter>Source\AshenVanguard\Public\Characters</Filter>
     </ClInclude>
+    <Filter Include="Source\AshenVanguard\Public\Characters\AI">
+      <UniqueIdentifier>{4FBA2923-2282-3FAA-B964-095AD29B2AA2}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTS_PlayerDistance.h">
+      <Filter>Source\AshenVanguard\Public\Characters\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_ChargeAttack.h">
+      <Filter>Source\AshenVanguard\Public\Characters\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_MeleeAttack.h">
+      <Filter>Source\AshenVanguard\Public\Characters\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Characters\AI\BTT_RageAttack.h">
+      <Filter>Source\AshenVanguard\Public\Characters\AI</Filter>
+    </ClInclude>
     <Filter Include="Source\AshenVanguard\Public\Combat">
       <UniqueIdentifier>{18C02459-9416-3EA2-88DF-78F0971FB924}</UniqueIdentifier>
     </Filter>
@@ -143,6 +206,15 @@
       <Filter>Source\AshenVanguard\Public\Combat</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\CombatComponent.h">
+      <Filter>Source\AshenVanguard\Public\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\EnemyProjectile.h">
+      <Filter>Source\AshenVanguard\Public\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\EnemyProjectileComponent.h">
+      <Filter>Source\AshenVanguard\Public\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\FTraceSockets.h">
       <Filter>Source\AshenVanguard\Public\Combat</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\AshenVanguard\Public\Combat\LockonComponent.h">

@@ -25,5 +25,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(MaxHealth) \
 	op(Strength) \
 	op(Stamina) \
-	op(MaxStamina) 
+	op(MaxStamina) \
+	op(MeleeRange) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
