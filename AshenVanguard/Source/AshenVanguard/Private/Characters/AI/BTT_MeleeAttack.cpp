@@ -4,6 +4,7 @@
 #include "Interfaces/Fighter.h"
 #include "GameFramework/Character.h"
 #include "Navigation/PathFollowingComponent.h"
+#include "Characters/EEnemyState.h"
 
 EBTNodeResult::Type UBTT_MeleeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
@@ -45,10 +46,21 @@ EBTNodeResult::Type UBTT_MeleeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerC
 
 void UBTT_MeleeAttack::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
 {
-	if (!bIsFinished)
+	float Distance{ OwnerComp.GetBlackboardComponent()->GetValueAsFloat(TEXT("Distance")) };
+
+	AAIController* AIRef{ OwnerComp.GetAIOwner() };
+
+	if (Distance > MeleeRange)
 	{
-		return;
+		OwnerComp.GetBlackboardComponent()->SetValueAsEnum(TEXT("CurrentState"), EEnemyState::Range);
+		AbortTask(OwnerComp, NodeMemory);
+		FinishLatentTask(OwnerComp, EBTNodeResult::Aborted);
+		AIRef->StopMovement();
+		AIRef->ClearFocus(EAIFocusPriority::Gameplay);
+		AIRef->ReceiveMoveCompleted.Remove(MoveDelegate);
 	}
+
+	if (!bIsFinished) { return; }
 
 	OwnerComp.GetAIOwner()->ReceiveMoveCompleted.Remove(MoveDelegate);
 	

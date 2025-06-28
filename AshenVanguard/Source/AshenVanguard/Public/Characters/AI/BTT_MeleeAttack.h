@@ -15,6 +15,9 @@ class ASHENVANGUARD_API UBTT_MeleeAttack : public UBTTaskNode
 	UPROPERTY(EditAnywhere)
 	float AcceptableRadius{ 100.0f };
 
+	UPROPERTY(EditAnywhere)
+	float MeleeRange{ 1250.0f };
+
 	FScriptDelegate MoveDelegate;
 
 	bool bIsFinished{ false };
