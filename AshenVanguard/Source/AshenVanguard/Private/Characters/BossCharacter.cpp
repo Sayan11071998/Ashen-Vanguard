@@ -61,3 +61,8 @@ float ABossCharacter::GetAnimationDuration()
 {
 	return CombatComp->AnimDuration;
 }
+
+float ABossCharacter::GetMeleeRange()
+{
+	return StatsComp->Stats[EStat::MeleeRange];
+}

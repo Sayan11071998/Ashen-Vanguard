@@ -39,6 +39,8 @@ struct Z_Construct_UEnum_AshenVanguard_EStat_Statics
 		{ "MaxHealth.Name", "MaxHealth" },
 		{ "MaxStamina.DisplayName", "Max Stamina" },
 		{ "MaxStamina.Name", "MaxStamina" },
+		{ "MeleeRange.DisplayName", "Melee Range" },
+		{ "MeleeRange.Name", "MeleeRange" },
 		{ "ModuleRelativePath", "Public/Characters/EStat.h" },
 		{ "None.DisplayName", "None Selected" },
 		{ "None.Name", "None" },
@@ -55,6 +57,7 @@ struct Z_Construct_UEnum_AshenVanguard_EStat_Statics
 		{ "Strength", (int64)Strength },
 		{ "Stamina", (int64)Stamina },
 		{ "MaxStamina", (int64)MaxStamina },
+		{ "MeleeRange", (int64)MeleeRange },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -84,10 +87,10 @@ UEnum* Z_Construct_UEnum_AshenVanguard_EStat()
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EStat_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EStat_StaticEnum, TEXT("EStat"), &Z_Registration_Info_UEnum_EStat, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1940356031U) },
+		{ EStat_StaticEnum, TEXT("EStat"), &Z_Registration_Info_UEnum_EStat, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1997521154U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EStat_h_2949727744(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EStat_h_4214990487(TEXT("/Script/AshenVanguard"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EStat_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EStat_h_Statics::EnumInfo));
