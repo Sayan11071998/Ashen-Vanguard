@@ -8,8 +8,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeAshenVanguard_init() {}
 	ASHENVANGUARD_API UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnAttackPerformedSignature__DelegateSignature();
+	ASHENVANGUARD_API UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature();
 	ASHENVANGUARD_API UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnSprintSignature__DelegateSignature();
+	ASHENVANGUARD_API UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature();
 	ASHENVANGUARD_API UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature();
+	ASHENVANGUARD_API UFunction* Z_Construct_USparseDelegateFunction_AshenVanguard_OnZeroHealthSignature__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_AshenVanguard;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_AshenVanguard()
 	{
@@ -17,21 +20,24 @@ void EmptyLinkFunctionForGeneratedCodeAshenVanguard_init() {}
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_AshenVanguard_OnAttackPerformedSignature__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_AshenVanguard_OnHealthPercentUpdateSignature__DelegateSignature,
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_AshenVanguard_OnSprintSignature__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_AshenVanguard_OnStaminaPercentUpdateSignature__DelegateSignature,
 				(UObject* (*)())Z_Construct_USparseDelegateFunction_AshenVanguard_OnUpdatedTargetSignature__DelegateSignature,
+				(UObject* (*)())Z_Construct_USparseDelegateFunction_AshenVanguard_OnZeroHealthSignature__DelegateSignature,
 			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
 				"/Script/AshenVanguard",
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xC82D3613,
-				0x07A75B0B,
+				0xF128C0D6,
+				0xCE32501E,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_AshenVanguard.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_AshenVanguard.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AshenVanguard(Z_Construct_UPackage__Script_AshenVanguard, TEXT("/Script/AshenVanguard"), Z_Registration_Info_UPackage__Script_AshenVanguard, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xC82D3613, 0x07A75B0B));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_AshenVanguard(Z_Construct_UPackage__Script_AshenVanguard, TEXT("/Script/AshenVanguard"), Z_Registration_Info_UPackage__Script_AshenVanguard, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xF128C0D6, 0xCE32501E));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
