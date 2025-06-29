@@ -52,3 +52,10 @@ void AMainCharacter::HandleDeath()
 	PlayAnimMontage(DeathAnimMontage);
 	DisableInput(GetController<APlayerController>());
 }
+
+void AMainCharacter::EndLockonWithActor(AActor* ActorRef)
+{
+	if (LockonComp->CurrentTargetActor != ActorRef) { return; }
+
+	LockonComp->EndLockon();
+}
