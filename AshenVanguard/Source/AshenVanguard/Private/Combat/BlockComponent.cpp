@@ -32,5 +32,9 @@ bool UBlockComponent::Check(AActor* Opponent)
 
 	if (Result > 0 || !PlayerRef->HasEnoughStamina(StaminaCost)) { return true; }
 
+	CharacterRef->PlayAnimMontage(BlockAnimMonatage);
+
+	OnBlockDelegate.Broadcast(StaminaCost);
+
 	return false;
 }

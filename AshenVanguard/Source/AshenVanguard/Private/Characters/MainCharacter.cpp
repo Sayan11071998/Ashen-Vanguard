@@ -66,3 +66,8 @@ bool AMainCharacter::CanTakeDamage(AActor* Oppoent)
 
 	return true;
 }
+
+void AMainCharacter::PlayHurtAnim()
+{
+	PlayAnimMontage(HurtAnimMontage);
+}
