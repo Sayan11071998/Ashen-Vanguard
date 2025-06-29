@@ -23,6 +23,9 @@ protected:
 	void UpdateSpeed();
 
 public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	bool bIsBlocking{ false };
+
 	UFUNCTION(BlueprintCallable)
 	void HandleUpdatedTarget(AActor* NewTargetActorRef);
 
