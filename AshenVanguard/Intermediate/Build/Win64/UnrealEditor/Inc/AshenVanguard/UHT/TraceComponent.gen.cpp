@@ -15,6 +15,7 @@ ASHENVANGUARD_API UClass* Z_Construct_UClass_UTraceComponent();
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UTraceComponent_NoRegister();
 ASHENVANGUARD_API UScriptStruct* Z_Construct_UScriptStruct_FTraceSockets();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+ENGINE_API UClass* Z_Construct_UClass_UParticleSystem_NoRegister();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
 
@@ -82,6 +83,10 @@ struct Z_Construct_UClass_UTraceComponent_Statics
 		{ "Category", "TraceComponent" },
 		{ "ModuleRelativePath", "Public/Combat/TraceComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HitParticleTemplate_MetaData[] = {
+		{ "Category", "TraceComponent" },
+		{ "ModuleRelativePath", "Public/Combat/TraceComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsAttacking_MetaData[] = {
 		{ "Category", "TraceComponent" },
 		{ "ModuleRelativePath", "Public/Combat/TraceComponent.h" },
@@ -92,6 +97,7 @@ struct Z_Construct_UClass_UTraceComponent_Statics
 	static const UECodeGen_Private::FDoublePropertyParams NewProp_BoxCollisionLength;
 	static void NewProp_bDebugMode_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bDebugMode;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_HitParticleTemplate;
 	static void NewProp_bIsAttacking_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsAttacking;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -113,6 +119,7 @@ void Z_Construct_UClass_UTraceComponent_Statics::NewProp_bDebugMode_SetBit(void*
 	((UTraceComponent*)Obj)->bDebugMode = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UTraceComponent_Statics::NewProp_bDebugMode = { "bDebugMode", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UTraceComponent), &Z_Construct_UClass_UTraceComponent_Statics::NewProp_bDebugMode_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bDebugMode_MetaData), NewProp_bDebugMode_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UTraceComponent_Statics::NewProp_HitParticleTemplate = { "HitParticleTemplate", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UTraceComponent, HitParticleTemplate), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HitParticleTemplate_MetaData), NewProp_HitParticleTemplate_MetaData) };
 void Z_Construct_UClass_UTraceComponent_Statics::NewProp_bIsAttacking_SetBit(void* Obj)
 {
 	((UTraceComponent*)Obj)->bIsAttacking = 1;
@@ -123,6 +130,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UTraceCom
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTraceComponent_Statics::NewProp_Sockets,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTraceComponent_Statics::NewProp_BoxCollisionLength,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTraceComponent_Statics::NewProp_bDebugMode,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTraceComponent_Statics::NewProp_HitParticleTemplate,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UTraceComponent_Statics::NewProp_bIsAttacking,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UTraceComponent_Statics::PropPointers) < 2048);
@@ -166,10 +174,10 @@ UTraceComponent::~UTraceComponent() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UTraceComponent, UTraceComponent::StaticClass, TEXT("UTraceComponent"), &Z_Registration_Info_UClass_UTraceComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTraceComponent), 1272012119U) },
+		{ Z_Construct_UClass_UTraceComponent, UTraceComponent::StaticClass, TEXT("UTraceComponent"), &Z_Registration_Info_UClass_UTraceComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UTraceComponent), 4150097092U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_3711534653(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_1933209845(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Combat_TraceComponent_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
