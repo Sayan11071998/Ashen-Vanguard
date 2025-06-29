@@ -44,4 +44,7 @@ public:
 	virtual float GetAnimationDuration() override;
 
 	virtual float GetMeleeRange() override;
+
+	UFUNCTION()
+	void HandlePlayerDeath();
 };

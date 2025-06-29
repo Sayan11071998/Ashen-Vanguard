@@ -4,13 +4,11 @@
 		"Module.AshenVanguard.cpp.obj": [
 			"BlockComponent.gen.cpp.obj",
 			"BossAnimInstance.gen.cpp.obj",
-			"BossCharacter.gen.cpp.obj",
 			"BTS_PlayerDistance.gen.cpp.obj",
 			"BTT_ChargeAttack.gen.cpp.obj",
 			"BTT_MeleeAttack.gen.cpp.obj",
 			"BTT_RageAttack.gen.cpp.obj",
 			"CombatComponent.gen.cpp.obj",
-			"EEnemyState.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
 			"EnemyProjectile.gen.cpp.obj",
 			"EnemyProjectileComponent.gen.cpp.obj",
@@ -20,6 +18,7 @@
 			"LockonComponent.gen.cpp.obj",
 			"LookAtPlayerAnimNotifyState.gen.cpp.obj",
 			"LookAtPlayerComponent.gen.cpp.obj",
+			"MainCharacter.gen.cpp.obj",
 			"MainPlayer.gen.cpp.obj",
 			"PlayerActionsComponent.gen.cpp.obj",
 			"PlayerAnimInstance.gen.cpp.obj",
@@ -36,10 +35,9 @@
 			"BTT_ChargeAttack.cpp.obj",
 			"BTT_MeleeAttack.cpp.obj",
 			"BTT_RageAttack.cpp.obj",
-			"BossCharacter.cpp.obj",
-			"EEnemyState.cpp.obj",
 			"EStat.cpp.obj",
 			"LookAtPlayerComponent.cpp.obj",
+			"MainCharacter.cpp.obj",
 			"PlayerActionsComponent.cpp.obj",
 			"StatsComponent.cpp.obj",
 			"BlockComponent.cpp.obj",
@@ -54,8 +52,10 @@
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
 			"AshenVanguard.init.gen.cpp.obj",
-			"MainCharacter.gen.cpp.obj",
-			"MainCharacter.cpp.obj"
+			"BossCharacter.gen.cpp.obj",
+			"EEnemyState.gen.cpp.obj",
+			"BossCharacter.cpp.obj",
+			"EEnemyState.cpp.obj"
 		]
 	}
 }

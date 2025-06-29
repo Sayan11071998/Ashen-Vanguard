@@ -23,5 +23,6 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(Idle) \
 	op(Range) \
 	op(Charge) \
-	op(Melle) 
+	op(Melle) \
+	op(GameOver) 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

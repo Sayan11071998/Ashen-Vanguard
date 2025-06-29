@@ -53,7 +53,11 @@
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\blackboarddata.generated.h",
             "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\uht\\blackboardcomponent.generated.h",
             "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\combat\\combatcomponent.h",
-            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\combatcomponent.generated.h"
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\combatcomponent.generated.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\characters\\maincharacter.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\source\\ashenvanguard\\public\\interfaces\\mainplayer.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\mainplayer.generated.h",
+            "c:\\users\\sayan\\projects\\ashen-vanguard\\ashenvanguard\\intermediate\\build\\win64\\unrealeditor\\inc\\ashenvanguard\\uht\\maincharacter.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

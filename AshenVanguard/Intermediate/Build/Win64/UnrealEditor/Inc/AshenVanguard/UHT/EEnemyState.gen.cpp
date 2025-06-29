@@ -35,6 +35,8 @@ struct Z_Construct_UEnum_AshenVanguard_EEnemyState_Statics
 		{ "BlueprintType", "true" },
 		{ "Charge.DisplayName", "Charge" },
 		{ "Charge.Name", "Charge" },
+		{ "GameOver.DisplayName", "Game Over" },
+		{ "GameOver.Name", "GameOver" },
 		{ "Idle.DisplayName", "Idle" },
 		{ "Idle.Name", "Idle" },
 		{ "Melle.DisplayName", "Melle" },
@@ -49,6 +51,7 @@ struct Z_Construct_UEnum_AshenVanguard_EEnemyState_Statics
 		{ "Range", (int64)Range },
 		{ "Charge", (int64)Charge },
 		{ "Melle", (int64)Melle },
+		{ "GameOver", (int64)GameOver },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -78,10 +81,10 @@ UEnum* Z_Construct_UEnum_AshenVanguard_EEnemyState()
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EEnemyState_StaticEnum, TEXT("EEnemyState"), &Z_Registration_Info_UEnum_EEnemyState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3692780449U) },
+		{ EEnemyState_StaticEnum, TEXT("EEnemyState"), &Z_Registration_Info_UEnum_EEnemyState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1032747139U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_249802470(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_846780939(TEXT("/Script/AshenVanguard"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_EEnemyState_h_Statics::EnumInfo));

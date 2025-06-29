@@ -16,6 +16,7 @@ class APawn;
 #define ASHENVANGUARD_BossCharacter_generated_h
 
 #define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHandlePlayerDeath); \
 	DECLARE_FUNCTION(execDetectPawn);
 
 

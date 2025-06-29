@@ -3,6 +3,7 @@
 #include "AIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Combat/CombatComponent.h"
+#include "Characters/MainCharacter.h"
 
 ABossCharacter::ABossCharacter()
 {
@@ -21,6 +22,9 @@ void ABossCharacter::BeginPlay()
 		TEXT("CurrentState"),
 		InitialState
 	);
+
+	GetWorld()->GetFirstPlayerController()->GetPawn<AMainCharacter>()
+		->StatsComp->OnZeroHealthDelegate.AddDynamic(this, &ABossCharacter::HandlePlayerDeath);
 }
 
 void ABossCharacter::Tick(float DeltaTime)
@@ -65,4 +69,9 @@ float ABossCharacter::GetAnimationDuration()
 float ABossCharacter::GetMeleeRange()
 {
 	return StatsComp->Stats[EStat::MeleeRange];
+}
+
+void ABossCharacter::HandlePlayerDeath()
+{
+	GetController<AAIController>()->GetBlackboardComponent()->SetValueAsEnum(TEXT("CurrentState"), EEnemyState::GameOver);
 }
