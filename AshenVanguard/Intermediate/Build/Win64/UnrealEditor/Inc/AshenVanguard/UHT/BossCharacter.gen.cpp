@@ -70,6 +70,35 @@ DEFINE_FUNCTION(ABossCharacter::execDetectPawn)
 }
 // End Class ABossCharacter Function DetectPawn
 
+// Begin Class ABossCharacter Function FinishDeathAnim
+struct Z_Construct_UFunction_ABossCharacter_FinishDeathAnim_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Characters/BossCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABossCharacter_FinishDeathAnim_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABossCharacter, nullptr, "FinishDeathAnim", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABossCharacter_FinishDeathAnim_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABossCharacter_FinishDeathAnim_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ABossCharacter_FinishDeathAnim()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABossCharacter_FinishDeathAnim_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ABossCharacter::execFinishDeathAnim)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FinishDeathAnim();
+	P_NATIVE_END;
+}
+// End Class ABossCharacter Function FinishDeathAnim
+
 // Begin Class ABossCharacter Function HandleDeath
 struct Z_Construct_UFunction_ABossCharacter_HandleDeath_Statics
 {
@@ -134,6 +163,7 @@ void ABossCharacter::StaticRegisterNativesABossCharacter()
 	UClass* Class = ABossCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "DetectPawn", &ABossCharacter::execDetectPawn },
+		{ "FinishDeathAnim", &ABossCharacter::execFinishDeathAnim },
 		{ "HandleDeath", &ABossCharacter::execHandleDeath },
 		{ "HandlePlayerDeath", &ABossCharacter::execHandlePlayerDeath },
 	};
@@ -179,6 +209,7 @@ struct Z_Construct_UClass_ABossCharacter_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ABossCharacter_DetectPawn, "DetectPawn" }, // 1807264011
+		{ &Z_Construct_UFunction_ABossCharacter_FinishDeathAnim, "FinishDeathAnim" }, // 1168937200
 		{ &Z_Construct_UFunction_ABossCharacter_HandleDeath, "HandleDeath" }, // 1304527931
 		{ &Z_Construct_UFunction_ABossCharacter_HandlePlayerDeath, "HandlePlayerDeath" }, // 2644662596
 	};
@@ -244,10 +275,10 @@ ABossCharacter::~ABossCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABossCharacter, ABossCharacter::StaticClass, TEXT("ABossCharacter"), &Z_Registration_Info_UClass_ABossCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABossCharacter), 516293784U) },
+		{ Z_Construct_UClass_ABossCharacter, ABossCharacter::StaticClass, TEXT("ABossCharacter"), &Z_Registration_Info_UClass_ABossCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABossCharacter), 133373552U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_502301198(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_721597385(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_BossCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
