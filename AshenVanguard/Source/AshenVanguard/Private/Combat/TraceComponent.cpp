@@ -3,6 +3,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Interfaces/Fighter.h"
 #include "Engine/DamageEvents.h"
+#include "Kismet/GameplayStatics.h"
 
 UTraceComponent::UTraceComponent()
 {
@@ -98,7 +99,13 @@ void UTraceComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 			GetOwner()
 		);
 
-	TargetsToIgnore.AddUnique(TargetActor);
+		TargetsToIgnore.AddUnique(TargetActor);
+
+		UGameplayStatics::SpawnEmitterAtLocation(
+			GetWorld(),
+			HitParticleTemplate,
+			Hit.ImpactPoint
+		);
 	}
 }
 

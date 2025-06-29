@@ -23,6 +23,9 @@ class ASHENVANGUARD_API UTraceComponent : public UActorComponent
 
 	TArray<AActor*> TargetsToIgnore;
 
+	UPROPERTY(EditAnywhere)
+	UParticleSystem* HitParticleTemplate;
+
 public:	
 	UTraceComponent();
 

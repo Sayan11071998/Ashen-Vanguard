@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef ASHENVANGUARD_StatsComponent_generated_h
 #error "StatsComponent.generated.h already included, missing '#pragma once' in StatsComponent.h"
 #endif

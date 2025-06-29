@@ -17,6 +17,11 @@ class ASHENVANGUARD_API ABossCharacter : public ACharacter, public IEnemy, publi
 
 	class UBlackboardComponent* BlackboardComp;
 
+	UPROPERTY(EditAnywhere)
+	UAnimMontage* DeathAnimation;
+
+	class AAIController* ControllerRef;
+
 public:
 	ABossCharacter();
 
@@ -44,4 +49,13 @@ public:
 	virtual float GetAnimationDuration() override;
 
 	virtual float GetMeleeRange() override;
+
+	UFUNCTION()
+	void HandlePlayerDeath();
+
+	UFUNCTION(BlueprintCallable)
+	void HandleDeath();
+
+	UFUNCTION()
+	void FinishDeathAnim();
 };

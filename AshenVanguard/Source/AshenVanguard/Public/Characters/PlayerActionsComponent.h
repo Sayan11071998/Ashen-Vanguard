@@ -12,6 +12,14 @@ DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(
 	cost
 );
 
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(
+	FOnRollSignature,
+	UPlayerActionsComponent,
+	OnRollDelegate,
+	float,
+	Cost
+);
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ASHENVANGUARD_API UPlayerActionsComponent : public UActorComponent
 {
@@ -32,11 +40,22 @@ class ASHENVANGUARD_API UPlayerActionsComponent : public UActorComponent
 	UPROPERTY(EditAnywhere)
 	float WalkSpeed{ 500.0f };
 
+	UPROPERTY(EditAnywhere)
+	UAnimMontage* RollAnimMontage;
+
+	UPROPERTY(EditAnywhere)
+	float RollCost{ 5.0f };
+
 public:	
 	UPlayerActionsComponent();
 
+	bool bIsRollActive{ false };
+
 	UPROPERTY(BlueprintAssignable)
 	FOnSprintSignature OnSprintDelegate;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnRollSignature OnRollDelegate;
 
 protected:
 	virtual void BeginPlay() override;
@@ -49,4 +68,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void Walk();
+
+	UFUNCTION(BlueprintCallable)
+	void Roll();
+
+	UFUNCTION()
+	void FinishRollAnim();
 };
