@@ -21,6 +21,12 @@ DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE_OneParam(
 	Percentage
 );
 
+DECLARE_DYNAMIC_MULTICAST_SPARSE_DELEGATE(
+	FOnZeroHealthSignature,
+	UStatsComponent,
+	OnZeroHealthDelegate
+);
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ASHENVANGUARD_API UStatsComponent : public UActorComponent
 {
@@ -46,6 +52,9 @@ public:
 
 	UPROPERTY(BlueprintAssignable)
 	FOnStaminaPercentUpdateSignature OnStaminaPercentUpdateDelegate;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnZeroHealthSignature OnZeroHealthDelegate;
 
 protected:
 	virtual void BeginPlay() override;
