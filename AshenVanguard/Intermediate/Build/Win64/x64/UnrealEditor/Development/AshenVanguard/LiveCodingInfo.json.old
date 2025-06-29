@@ -2,8 +2,6 @@
 	"RemapUnityFiles": 
 	{
 		"Module.AshenVanguard.cpp.obj": [
-			"AshenVanguard.init.gen.cpp.obj",
-			"BlockComponent.gen.cpp.obj",
 			"BossAnimInstance.gen.cpp.obj",
 			"BossCharacter.gen.cpp.obj",
 			"BTS_PlayerDistance.gen.cpp.obj",
@@ -32,6 +30,7 @@
 			"AshenVanguard.cpp.obj",
 			"BossAnimInstance.cpp.obj",
 			"LookAtPlayerAnimNotifyState.cpp.obj",
+			"PlayerAnimInstance.cpp.obj",
 			"ToggleTraceNotifyState.cpp.obj",
 			"BTS_PlayerDistance.cpp.obj",
 			"BTT_ChargeAttack.cpp.obj",
@@ -41,10 +40,7 @@
 			"EEnemyState.cpp.obj",
 			"EStat.cpp.obj",
 			"LookAtPlayerComponent.cpp.obj",
-			"MainCharacter.cpp.obj",
 			"PlayerActionsComponent.cpp.obj",
-			"StatsComponent.cpp.obj",
-			"BlockComponent.cpp.obj",
 			"CombatComponent.cpp.obj",
 			"EnemyProjectile.cpp.obj",
 			"EnemyProjectileComponent.cpp.obj",
@@ -52,10 +48,14 @@
 			"LockonComponent.cpp.obj",
 			"TraceComponent.cpp.obj",
 			"Enemy.cpp.obj",
-			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
-			"PlayerAnimInstance.cpp.obj"
+			"AshenVanguard.init.gen.cpp.obj",
+			"BlockComponent.gen.cpp.obj",
+			"MainCharacter.cpp.obj",
+			"StatsComponent.cpp.obj",
+			"BlockComponent.cpp.obj",
+			"Fighter.cpp.obj"
 		]
 	}
 }

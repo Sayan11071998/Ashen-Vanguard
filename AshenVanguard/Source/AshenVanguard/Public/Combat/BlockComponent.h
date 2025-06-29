@@ -10,6 +10,9 @@ class ASHENVANGUARD_API UBlockComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
+	UPROPERTY(EditAnywhere)
+	float StaminaCost{ 10.0f };
+
 public:	
 	UBlockComponent();
 
@@ -18,4 +21,6 @@ protected:
 
 public:	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	bool Check(AActor* Opponent);
 };
