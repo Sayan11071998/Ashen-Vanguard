@@ -21,8 +21,10 @@ ASHENVANGUARD_API UClass* Z_Construct_UClass_UPlayerActionsComponent_NoRegister(
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UPlayerAnimInstance_NoRegister();
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UStatsComponent_NoRegister();
 ASHENVANGUARD_API UClass* Z_Construct_UClass_UTraceComponent_NoRegister();
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UCameraShakeBase_NoRegister();
 UPackage* Z_Construct_UPackage__Script_AshenVanguard();
 // End Cross Module References
 
@@ -58,14 +60,26 @@ DEFINE_FUNCTION(AMainCharacter::execHandleDeath)
 // Begin Class AMainCharacter Function PlayHurtAnim
 struct Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics
 {
+	struct MainCharacter_eventPlayHurtAnim_Parms
+	{
+		TSubclassOf<UCameraShakeBase> CameraShakeTemplate;
+	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Public/Characters/MainCharacter.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FClassPropertyParams NewProp_CameraShakeTemplate;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMainCharacter, nullptr, "PlayHurtAnim", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::Function_MetaDataParams) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::NewProp_CameraShakeTemplate = { "CameraShakeTemplate", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(MainCharacter_eventPlayHurtAnim_Parms, CameraShakeTemplate), Z_Construct_UClass_UClass, Z_Construct_UClass_UCameraShakeBase_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::NewProp_CameraShakeTemplate,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMainCharacter, nullptr, "PlayHurtAnim", nullptr, nullptr, Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::PropPointers), sizeof(Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::MainCharacter_eventPlayHurtAnim_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_AMainCharacter_PlayHurtAnim_Statics::MainCharacter_eventPlayHurtAnim_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AMainCharacter_PlayHurtAnim()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -77,9 +91,10 @@ UFunction* Z_Construct_UFunction_AMainCharacter_PlayHurtAnim()
 }
 DEFINE_FUNCTION(AMainCharacter::execPlayHurtAnim)
 {
+	P_GET_OBJECT(UClass,Z_Param_CameraShakeTemplate);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->PlayHurtAnim();
+	P_THIS->PlayHurtAnim(Z_Param_CameraShakeTemplate);
 	P_NATIVE_END;
 }
 // End Class AMainCharacter Function PlayHurtAnim
@@ -163,7 +178,7 @@ struct Z_Construct_UClass_AMainCharacter_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_AMainCharacter_HandleDeath, "HandleDeath" }, // 3533656867
-		{ &Z_Construct_UFunction_AMainCharacter_PlayHurtAnim, "PlayHurtAnim" }, // 1261709784
+		{ &Z_Construct_UFunction_AMainCharacter_PlayHurtAnim, "PlayHurtAnim" }, // 3258786886
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -237,10 +252,10 @@ AMainCharacter::~AMainCharacter() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 1725465114U) },
+		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 769485816U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_1328016406(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_4245776937(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Characters_MainCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

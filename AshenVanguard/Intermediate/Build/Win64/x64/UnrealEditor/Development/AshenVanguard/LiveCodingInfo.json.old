@@ -42,7 +42,6 @@
 			"EEnemyState.cpp.obj",
 			"EStat.cpp.obj",
 			"LookAtPlayerComponent.cpp.obj",
-			"MainCharacter.cpp.obj",
 			"PlayerActionsComponent.cpp.obj",
 			"StatsComponent.cpp.obj",
 			"BlockComponent.cpp.obj",
@@ -51,11 +50,12 @@
 			"EnemyProjectileComponent.cpp.obj",
 			"FTraceSockets.cpp.obj",
 			"LockonComponent.cpp.obj",
+			"TraceComponent.cpp.obj",
 			"Enemy.cpp.obj",
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
-			"TraceComponent.cpp.obj"
+			"MainCharacter.cpp.obj"
 		]
 	}
 }
