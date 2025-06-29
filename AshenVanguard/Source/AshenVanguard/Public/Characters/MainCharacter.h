@@ -11,6 +11,9 @@ class ASHENVANGUARD_API AMainCharacter : public ACharacter, public IMainPlayer, 
 {
 	GENERATED_BODY()
 
+	UPROPERTY(EditAnywhere)
+	UAnimMontage* DeathAnimMontage;
+
 public:
 	AMainCharacter();
 
@@ -46,4 +49,7 @@ public:
 	virtual float GetDamage() override;
 
 	virtual bool HasEnoughStamina(float Cost) override;
+
+	UFUNCTION(BlueprintCallable)
+	void HandleDeath();
 };
