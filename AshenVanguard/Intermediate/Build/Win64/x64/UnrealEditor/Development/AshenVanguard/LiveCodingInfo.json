@@ -9,6 +9,7 @@
 			"BTT_MeleeAttack.gen.cpp.obj",
 			"BTT_RageAttack.gen.cpp.obj",
 			"CombatComponent.gen.cpp.obj",
+			"EEnemyState.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
 			"EnemyProjectile.gen.cpp.obj",
 			"EnemyProjectileComponent.gen.cpp.obj",
@@ -35,6 +36,7 @@
 			"BTT_ChargeAttack.cpp.obj",
 			"BTT_MeleeAttack.cpp.obj",
 			"BTT_RageAttack.cpp.obj",
+			"EEnemyState.cpp.obj",
 			"EStat.cpp.obj",
 			"LookAtPlayerComponent.cpp.obj",
 			"MainCharacter.cpp.obj",
@@ -53,9 +55,7 @@
 			"Throwaway.cpp.obj",
 			"AshenVanguard.init.gen.cpp.obj",
 			"BossCharacter.gen.cpp.obj",
-			"EEnemyState.gen.cpp.obj",
-			"BossCharacter.cpp.obj",
-			"EEnemyState.cpp.obj"
+			"BossCharacter.cpp.obj"
 		]
 	}
 }

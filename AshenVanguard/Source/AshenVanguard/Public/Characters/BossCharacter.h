@@ -17,6 +17,11 @@ class ASHENVANGUARD_API ABossCharacter : public ACharacter, public IEnemy, publi
 
 	class UBlackboardComponent* BlackboardComp;
 
+	UPROPERTY(EditAnywhere)
+	UAnimMontage* DeathAnimation;
+
+	class AAIController* ControllerRef;
+
 public:
 	ABossCharacter();
 
@@ -47,4 +52,7 @@ public:
 
 	UFUNCTION()
 	void HandlePlayerDeath();
+
+	UFUNCTION(BlueprintCallable)
+	void HandleDeath();
 };
