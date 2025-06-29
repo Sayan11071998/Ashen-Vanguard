@@ -46,10 +46,10 @@ class ASHENVANGUARD_API UPlayerActionsComponent : public UActorComponent
 	UPROPERTY(EditAnywhere)
 	float RollCost{ 5.0f };
 
-	bool bIsRollActive{ false };
-
 public:	
 	UPlayerActionsComponent();
+
+	bool bIsRollActive{ false };
 
 	UPROPERTY(BlueprintAssignable)
 	FOnSprintSignature OnSprintDelegate;
