@@ -2,6 +2,8 @@
 	"RemapUnityFiles": 
 	{
 		"Module.AshenVanguard.cpp.obj": [
+			"AshenVanguard.init.gen.cpp.obj",
+			"BlockComponent.gen.cpp.obj",
 			"BossAnimInstance.gen.cpp.obj",
 			"BossCharacter.gen.cpp.obj",
 			"BTS_PlayerDistance.gen.cpp.obj",
@@ -40,8 +42,9 @@
 			"EEnemyState.cpp.obj",
 			"EStat.cpp.obj",
 			"LookAtPlayerComponent.cpp.obj",
-			"PlayerActionsComponent.cpp.obj",
+			"MainCharacter.cpp.obj",
 			"StatsComponent.cpp.obj",
+			"BlockComponent.cpp.obj",
 			"CombatComponent.cpp.obj",
 			"EnemyProjectile.cpp.obj",
 			"EnemyProjectileComponent.cpp.obj",
@@ -52,10 +55,7 @@
 			"Fighter.cpp.obj",
 			"MainPlayer.cpp.obj",
 			"Throwaway.cpp.obj",
-			"AshenVanguard.init.gen.cpp.obj",
-			"BlockComponent.gen.cpp.obj",
-			"MainCharacter.cpp.obj",
-			"BlockComponent.cpp.obj"
+			"PlayerActionsComponent.cpp.obj"
 		]
 	}
 }
