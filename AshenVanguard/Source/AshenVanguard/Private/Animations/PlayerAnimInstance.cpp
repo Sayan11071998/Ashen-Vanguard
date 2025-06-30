@@ -21,11 +21,7 @@ void UPlayerAnimInstance::UpdateDirection()
 	APawn* PawnRef{ TryGetPawnOwner() };
 
 	if (!IsValid(PawnRef)) { return; }
-
 	if (!bIsInCombat) { return; }
 
-	CurrentDirection = CalculateDirection(
-		PawnRef->GetVelocity(),
-		PawnRef->GetActorRotation()
-	);
+	CurrentDirection = CalculateDirection(PawnRef->GetVelocity(), PawnRef->GetActorRotation());
 }

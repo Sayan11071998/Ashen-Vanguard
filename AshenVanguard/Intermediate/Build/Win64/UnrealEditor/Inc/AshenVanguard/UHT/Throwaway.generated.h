@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ASHENVANGUARD_Throwaway_generated_h
 
-#define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUThrowaway(); \
 	friend struct Z_Construct_UClass_UThrowaway_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(UThrowaway)
 
 
-#define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_10_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UThrowaway(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~UThrowaway();
 
 
-#define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_12_PROLOG
-#define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_15_GENERATED_BODY \
+#define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_7_PROLOG
+#define FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

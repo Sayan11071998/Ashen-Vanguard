@@ -14,7 +14,6 @@ void UBTT_ChargeAttack::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 	if (bIsReadyToCharge)
 	{
 		OwnerComp.GetBlackboardComponent()->SetValueAsBool(TEXT("IsReadyToCharge"), false);
-
 		ChargetAtPlayer();
 	}
 
@@ -29,7 +28,6 @@ void UBTT_ChargeAttack::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 UBTT_ChargeAttack::UBTT_ChargeAttack()
 {
 	bNotifyTick = true;
-
 	MoveCompletedDelegate.BindUFunction(this, TEXT("HandleMoveCompleted"));
 }
 
@@ -37,12 +35,11 @@ EBTNodeResult::Type UBTT_ChargeAttack::ExecuteTask(UBehaviorTreeComponent& Owner
 {
 	ControllerRef = OwnerComp.GetAIOwner();
 	CharacterRef = ControllerRef->GetCharacter();
+	
 	BossAnim = Cast<UBossAnimInstance>(CharacterRef->GetMesh()->GetAnimInstance());
-
 	BossAnim->bIsCharging = true;
 
 	OwnerComp.GetBlackboardComponent()->SetValueAsBool(TEXT("IsReadyToCharge"), false);
-
 	bIsFinished = false;
 
 	return EBTNodeResult::InProgress;
@@ -58,12 +55,10 @@ void UBTT_ChargeAttack::ChargetAtPlayer()
 	MoveRequest.SetAcceptanceRadius(AcceptableRadius);
 
 	ControllerRef->ReceiveMoveCompleted.AddUnique(MoveCompletedDelegate);
-
 	ControllerRef->MoveTo(MoveRequest);
 	ControllerRef->SetFocus(PlayerRef);
 
 	OriginalWalkSpeed = CharacterRef->GetCharacterMovement()->MaxWalkSpeed;
-
 	CharacterRef->GetCharacterMovement()->MaxWalkSpeed = ChargeWalkSpeed;
 }
 
@@ -73,7 +68,6 @@ void UBTT_ChargeAttack::HandleMoveCompleted()
 
 	FTimerHandle AttackTimerHandler;
 	CharacterRef->GetWorldTimerManager().SetTimer(AttackTimerHandler, this, &UBTT_ChargeAttack::FinishAttackTask, 1.0f, false);
-
 	CharacterRef->GetCharacterMovement()->MaxWalkSpeed = OriginalWalkSpeed;
 }
 

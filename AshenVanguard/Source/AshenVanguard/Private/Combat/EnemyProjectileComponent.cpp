@@ -21,7 +21,6 @@ void UEnemyProjectileComponent::SpawnProjectile(FName ComponentName, TSubclassOf
 	USceneComponent* SpawnPointComp{ Cast<USceneComponent>(GetOwner()->GetDefaultSubobjectByName(ComponentName)) };
 
 	FVector SpawnLocation{ SpawnPointComp->GetComponentLocation() };
-
 	FVector PlayerLocation{ GetWorld()->GetFirstPlayerController()->GetPawn()->GetActorLocation() };
 
 	FRotator SpawnRotation{ UKismetMathLibrary::FindLookAtRotation(SpawnLocation, PlayerLocation) };

@@ -49,17 +49,17 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION(BlueprintCallable)
+	void HandleDeath();
+
+	UFUNCTION(BlueprintCallable)
+	void PlayHurtAnim(TSubclassOf<class UCameraShakeBase> CameraShakeTemplate);
+
+	virtual void EndLockonWithActor(AActor* ActorRef) override;
+	
 	virtual float GetDamage() override;
 
 	virtual bool HasEnoughStamina(float Cost) override;
 
-	UFUNCTION(BlueprintCallable)
-	void HandleDeath();
-
-	virtual void EndLockonWithActor(AActor* ActorRef) override;
-
 	virtual bool CanTakeDamage(AActor* Oppoent) override;
-
-	UFUNCTION(BlueprintCallable)
-	void PlayHurtAnim(TSubclassOf<class UCameraShakeBase> CameraShakeTemplate);
 };

@@ -19,8 +19,8 @@ class ASHENVANGUARD_API ULockonComponent : public UActorComponent
 
 	ACharacter* OwnerRef;
 	APlayerController* Controller;
-	class UCharacterMovementComponent* MovementComp;
 
+	class UCharacterMovementComponent* MovementComp;
 	class USpringArmComponent* SpringArmComp;
 
 public:

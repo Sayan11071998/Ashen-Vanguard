@@ -25,11 +25,10 @@ class ASHENVANGUARD_API UPlayerActionsComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-	ACharacter* CharacterRef;
-
 	class IMainPlayer* IPlayerRef;
-
 	class UCharacterMovementComponent* MovementComp;
+
+	ACharacter* CharacterRef;
 
 	UPROPERTY(EditAnywhere)
 	float SprintCost{ 0.1f };
@@ -49,13 +48,13 @@ class ASHENVANGUARD_API UPlayerActionsComponent : public UActorComponent
 public:	
 	UPlayerActionsComponent();
 
-	bool bIsRollActive{ false };
-
 	UPROPERTY(BlueprintAssignable)
 	FOnSprintSignature OnSprintDelegate;
 
 	UPROPERTY(BlueprintAssignable)
 	FOnRollSignature OnRollDelegate;
+
+	bool bIsRollActive{ false };
 
 protected:
 	virtual void BeginPlay() override;

@@ -11,6 +11,7 @@ class ASHENVANGUARD_API UTraceComponent : public UActorComponent
 	GENERATED_BODY()
 
 	USkeletalMeshComponent* SkeletalComp;
+	TArray<AActor*> TargetsToIgnore;
 
 	UPROPERTY(EditAnywhere)
 	TArray<FTraceSockets> Sockets;
@@ -20,8 +21,6 @@ class ASHENVANGUARD_API UTraceComponent : public UActorComponent
 
 	UPROPERTY(EditAnywhere)
 	bool bDebugMode{ false };
-
-	TArray<AActor*> TargetsToIgnore;
 
 	UPROPERTY(EditAnywhere)
 	UParticleSystem* HitParticleTemplate;

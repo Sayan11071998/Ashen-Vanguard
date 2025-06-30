@@ -31,7 +31,6 @@ EBTNodeResult::Type UBTT_RageAttack::ExecuteTask(UBehaviorTreeComponent& OwnerCo
 	if (RandomValue > Threshold)
 	{
 		Threshold = 0.9;
-
 		OwnerComp.GetBlackboardComponent()->SetValueAsEnum(TEXT("CurrentState"), EEnemyState::Charge);
 	}
 	else

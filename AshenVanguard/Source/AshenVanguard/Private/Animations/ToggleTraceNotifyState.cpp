@@ -3,10 +3,7 @@
 
 UTraceComponent* UToggleTraceNotifyState::GetTraceComponent(USkeletalMeshComponent* MeshComp) const
 {
-	if (!IsValid(MeshComp) || !IsValid(MeshComp->GetOwner()))
-	{
-		return nullptr;
-	}
+	if (!IsValid(MeshComp) || !IsValid(MeshComp->GetOwner())) { return nullptr; }
 
 	return MeshComp->GetOwner()->FindComponentByClass<UTraceComponent>();
 }

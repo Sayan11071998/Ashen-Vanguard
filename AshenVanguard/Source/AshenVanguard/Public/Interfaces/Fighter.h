@@ -15,9 +15,9 @@ class ASHENVANGUARD_API IFighter
 	GENERATED_BODY()
 
 public:
-	virtual float GetDamage() { return 0.0f; }
-
 	virtual void Attack() {}
+
+	virtual float GetDamage() { return 0.0f; }
 
 	virtual float GetAnimationDuration() { return 0.0f; }
 
