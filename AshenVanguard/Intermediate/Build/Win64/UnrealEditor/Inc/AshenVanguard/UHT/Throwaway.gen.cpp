@@ -29,9 +29,6 @@ struct Z_Construct_UClass_UThrowaway_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
-#endif
 		{ "IncludePath", "Throwaway.h" },
 		{ "ModuleRelativePath", "Public/Throwaway.h" },
 	};
@@ -83,10 +80,10 @@ UThrowaway::~UThrowaway() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UThrowaway, UThrowaway::StaticClass, TEXT("UThrowaway"), &Z_Registration_Info_UClass_UThrowaway, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UThrowaway), 1680373196U) },
+		{ Z_Construct_UClass_UThrowaway, UThrowaway::StaticClass, TEXT("UThrowaway"), &Z_Registration_Info_UClass_UThrowaway, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UThrowaway), 1740211896U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_2433321645(TEXT("/Script/AshenVanguard"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_4089000242(TEXT("/Script/AshenVanguard"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_Ashen_Vanguard_AshenVanguard_Source_AshenVanguard_Public_Throwaway_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

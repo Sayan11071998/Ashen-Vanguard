@@ -39,9 +39,7 @@ void ULockonComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 	TargetLocation.Z -= 125.0;
 
-	FRotator NewRotation{ UKismetMathLibrary::FindLookAtRotation(
-		CurrentLocation, TargetLocation
-	) };
+	FRotator NewRotation{ UKismetMathLibrary::FindLookAtRotation(CurrentLocation, TargetLocation) };
 
 	Controller->SetControlRotation(NewRotation);
 }
@@ -68,7 +66,6 @@ void ULockonComponent::StartLockon(float Radius)
 	) };
 
 	if (!bHasFoundTarget) { return; }
-
 	if (!OutResult.GetActor()->Implements<UEnemy>()) { return; }
 
 	CurrentTargetActor = OutResult.GetActor();
@@ -94,9 +91,7 @@ void ULockonComponent::EndLockon()
 	MovementComp->bUseControllerDesiredRotation = false;
 
 	SpringArmComp->TargetOffset = FVector::ZeroVector;
-
 	Controller->ResetIgnoreLookInput();
-
 	OnUpdatedTargetDelegate.Broadcast(CurrentTargetActor);
 }
 

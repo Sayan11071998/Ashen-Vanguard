@@ -23,10 +23,7 @@ void ABossCharacter::BeginPlay()
 	ControllerRef = GetController<AAIController>();
 
 	BlackboardComp = ControllerRef->GetBlackboardComponent();
-	BlackboardComp->SetValueAsEnum(
-		TEXT("CurrentState"),
-		InitialState
-	);
+	BlackboardComp->SetValueAsEnum(TEXT("CurrentState"), InitialState);
 
 	GetWorld()->GetFirstPlayerController()->GetPawn<AMainCharacter>()
 		->StatsComp->OnZeroHealthDelegate.AddDynamic(this, &ABossCharacter::HandlePlayerDeath);
@@ -44,16 +41,11 @@ void ABossCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 void ABossCharacter::DetectPawn(APawn* DetectedPawn, APawn* PawnToDetect)
 {
-	EEnemyState CurrentState{
-		static_cast<EEnemyState>(BlackboardComp->GetValueAsEnum(TEXT("CurrentState")))
-	};
+	EEnemyState CurrentState{ static_cast<EEnemyState>(BlackboardComp->GetValueAsEnum(TEXT("CurrentState"))) };
 	
 	if (DetectedPawn != PawnToDetect || CurrentState != EEnemyState::Idle) { return; }
 
-	BlackboardComp->SetValueAsEnum(
-		TEXT("CurrentState"),
-		EEnemyState::Range
-	);
+	BlackboardComp->SetValueAsEnum(TEXT("CurrentState"), EEnemyState::Range);
 }
 
 float ABossCharacter::GetDamage()

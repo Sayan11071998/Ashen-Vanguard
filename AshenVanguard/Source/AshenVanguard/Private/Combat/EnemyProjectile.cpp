@@ -26,7 +26,6 @@ void AEnemyProjectile::HandleBeginOverlap(AActor* OtherActor)
 	if (!PawnRef->IsPlayerControlled()) { return; }
 
 	FindComponentByClass<UParticleSystemComponent>()->SetTemplate(HitTemplate);
-
 	FindComponentByClass<UProjectileMovementComponent>()->StopMovementImmediately();
 
 	FTimerHandle DeathTimerHandle{};
@@ -41,7 +40,6 @@ void AEnemyProjectile::HandleBeginOverlap(AActor* OtherActor)
 	FindComponentByClass<USphereComponent>()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 	FDamageEvent ProjectileDamageEvent{};
-
 	PawnRef->TakeDamage(Damage, ProjectileDamageEvent, PawnRef->GetController(), this);
 }
 

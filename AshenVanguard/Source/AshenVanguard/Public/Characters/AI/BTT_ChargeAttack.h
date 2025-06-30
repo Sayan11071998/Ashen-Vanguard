@@ -9,22 +9,19 @@ class ASHENVANGUARD_API UBTT_ChargeAttack : public UBTTaskNode
 {
 	GENERATED_BODY()
 
-	AAIController* ControllerRef;
-
-	ACharacter* CharacterRef;
-
 	class UBossAnimInstance* BossAnim;
+
+	AAIController* ControllerRef;
+	ACharacter* CharacterRef;
+	FScriptDelegate MoveCompletedDelegate;
 
 	UPROPERTY(EditAnywhere)
 	float AcceptableRadius{ 100.0f };
 
-	FScriptDelegate MoveCompletedDelegate;
-
-	float OriginalWalkSpeed;
-
 	UPROPERTY(EditAnywhere)
 	float ChargeWalkSpeed{ 2000.0f };
-
+	
+	float OriginalWalkSpeed;
 	bool bIsFinished{ false };
 
 protected:
@@ -33,13 +30,13 @@ protected:
 public:
 	UBTT_ChargeAttack();
 
-	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
-
-	void ChargetAtPlayer();
-
 	UFUNCTION()
 	void HandleMoveCompleted();
 
 	UFUNCTION()
 	void FinishAttackTask();
+	
+	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
+
+	void ChargetAtPlayer();
 };

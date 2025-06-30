@@ -28,7 +28,6 @@ void ULookAtPlayerComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 	FRotator CurrentRotation{ OwnerRef->GetActorRotation() };
 
 	FRotator NewRotation{ UKismetMathLibrary::RInterpTo_Constant(CurrentRotation, DesiredRotation, DeltaTime, Speed) };
-
 	FRotator NewYawOnlyRotation{ CurrentRotation.Pitch, NewRotation.Yaw, CurrentRotation.Roll };
 
 	OwnerRef->SetActorRotation(NewYawOnlyRotation);

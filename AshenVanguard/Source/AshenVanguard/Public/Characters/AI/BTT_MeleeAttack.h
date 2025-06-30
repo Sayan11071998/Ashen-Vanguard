@@ -9,13 +9,13 @@ class ASHENVANGUARD_API UBTT_MeleeAttack : public UBTTaskNode
 {
 	GENERATED_BODY()
 
+	FScriptDelegate MoveDelegate;
+
 	UPROPERTY(EditAnywhere)
 	float AttackRadius{ 200.0f };
 
 	UPROPERTY(EditAnywhere)
 	float AcceptableRadius{ 100.0f };
-
-	FScriptDelegate MoveDelegate;
 
 	bool bIsFinished{ false };
 

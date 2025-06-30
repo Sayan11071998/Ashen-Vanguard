@@ -12,15 +12,14 @@ class ASHENVANGUARD_API ABossCharacter : public ACharacter, public IEnemy, publi
 {
 	GENERATED_BODY()
 
+	class UBlackboardComponent* BlackboardComp;
+	class AAIController* ControllerRef;
+
 	UPROPERTY(EditAnywhere)
 	TEnumAsByte<EEnemyState> InitialState;
 
-	class UBlackboardComponent* BlackboardComp;
-
 	UPROPERTY(EditAnywhere)
 	UAnimMontage* DeathAnimation;
-
-	class AAIController* ControllerRef;
 
 public:
 	ABossCharacter();
@@ -42,14 +41,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void DetectPawn(APawn* DetectedPawn, APawn* PawnToDetect);
 
-	virtual float GetDamage() override;
-
-	virtual void Attack() override;
-
-	virtual float GetAnimationDuration() override;
-
-	virtual float GetMeleeRange() override;
-
 	UFUNCTION()
 	void HandlePlayerDeath();
 
@@ -58,4 +49,12 @@ public:
 
 	UFUNCTION()
 	void FinishDeathAnim();
+
+	virtual void Attack() override;
+
+	virtual float GetDamage() override;
+
+	virtual float GetAnimationDuration() override;
+
+	virtual float GetMeleeRange() override;
 };

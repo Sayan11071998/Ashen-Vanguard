@@ -26,24 +26,17 @@ void UCombatComponent::ComboAttack()
 	{
 		IMainPlayer* IPlayerRef{ Cast<IMainPlayer>(CharacterRef) };
 
-		if (IPlayerRef && !IPlayerRef->HasEnoughStamina(StaminaCost))
-		{
-			return;
-		}
+		if (IPlayerRef && !IPlayerRef->HasEnoughStamina(StaminaCost)) { return; }
 	}
 
 	if (!bCanAttack) { return; }
 
 	bCanAttack = false;
-
 	CharacterRef->PlayAnimMontage(AttackAnimations[ComboCounter]);
-	
 	ComboCounter++;
 
 	int MaxCombo{ AttackAnimations.Num() };
-
 	ComboCounter = UKismetMathLibrary::Wrap(ComboCounter, -1, MaxCombo - 1);
-
 	OnAttackPerformedDelegate.Broadcast(StaminaCost);
 }
 
@@ -55,6 +48,5 @@ void UCombatComponent::HandleResetAttack()
 void UCombatComponent::RandomAttack()
 {
 	int RandomIndex{ FMath::RandRange(0, AttackAnimations.Num() - 1) };
-
 	AnimDuration = CharacterRef->PlayAnimMontage(AttackAnimations[RandomIndex]);
 }

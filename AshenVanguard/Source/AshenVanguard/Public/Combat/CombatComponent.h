@@ -17,10 +17,10 @@ class ASHENVANGUARD_API UCombatComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
+	ACharacter* CharacterRef;
+
 	UPROPERTY(EditAnywhere)
 	TArray<UAnimMontage*> AttackAnimations;
-
-	ACharacter* CharacterRef;
 
 	UPROPERTY(VisibleAnywhere)
 	int ComboCounter{ 0 };

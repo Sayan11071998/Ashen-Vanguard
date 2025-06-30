@@ -17,12 +17,12 @@ EBTNodeResult::Type UBTT_MeleeAttack::ExecuteTask(UBehaviorTreeComponent& OwnerC
 	if (Distance > AttackRadius)
 	{
 		APawn* PlayerRef{ GetWorld()->GetFirstPlayerController()->GetPawn() };
+		
 		FAIMoveRequest MoveRequest{ PlayerRef };
 		MoveRequest.SetUsePathfinding(true);
 		MoveRequest.SetAcceptanceRadius(AcceptableRadius);
 
 		AIRef->ReceiveMoveCompleted.AddUnique(MoveDelegate);
-
 		AIRef->MoveTo(MoveRequest);
 		AIRef->SetFocus(PlayerRef);
 	}
@@ -49,7 +49,6 @@ void UBTT_MeleeAttack::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMe
 	float Distance{ OwnerComp.GetBlackboardComponent()->GetValueAsFloat(TEXT("Distance")) };
 
 	AAIController* AIRef{ OwnerComp.GetAIOwner() };
-
 	IFighter* FighterRef{ Cast<IFighter>(AIRef->GetCharacter()) };
 
 	if (Distance > FighterRef->GetMeleeRange())
@@ -65,14 +64,12 @@ void UBTT_MeleeAttack::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMe
 	if (!bIsFinished) { return; }
 
 	OwnerComp.GetAIOwner()->ReceiveMoveCompleted.Remove(MoveDelegate);
-	
 	FinishLatentTask(OwnerComp, EBTNodeResult::Succeeded);
 }
 
 UBTT_MeleeAttack::UBTT_MeleeAttack()
 {
 	MoveDelegate.BindUFunction(this, "FinishAttackTask");
-
 	bNotifyTick = true;
 }
 

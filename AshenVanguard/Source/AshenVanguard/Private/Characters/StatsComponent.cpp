@@ -27,11 +27,7 @@ void UStatsComponent::ReduceHealth(float Amount, AActor* Oppoent)
 	if (!FighterRef->CanTakeDamage(Oppoent)) { return; }
 
 	Stats[EStat::Health] -= Amount;
-	Stats[EStat::Health] = UKismetMathLibrary::FClamp(
-		Stats[EStat::Health],
-		0,
-		Stats[EStat::MaxHealth]
-	);
+	Stats[EStat::Health] = UKismetMathLibrary::FClamp(Stats[EStat::Health], 0, Stats[EStat::MaxHealth]);
 
 	OnHealthPercentUpdateDelegate.Broadcast(GetStatPercentage(EStat::Health, EStat::MaxHealth));
 
@@ -44,26 +40,13 @@ void UStatsComponent::ReduceHealth(float Amount, AActor* Oppoent)
 void UStatsComponent::ReduceStamina(float Amount)
 {
 	Stats[EStat::Stamina] -= Amount;
-	Stats[EStat::Stamina] = UKismetMathLibrary::FClamp(
-		Stats[EStat::Stamina],
-		0,
-		Stats[EStat::MaxStamina]
-	);
+	Stats[EStat::Stamina] = UKismetMathLibrary::FClamp(Stats[EStat::Stamina], 0, Stats[EStat::MaxStamina]);
 
 	bCanRegen = false;
 
-	FLatentActionInfo FunctionInfo{
-		0,
-		100,
-		TEXT("EnableRegen"),
-		this
-	};
+	FLatentActionInfo FunctionInfo{ 0, 100, TEXT("EnableRegen"), this };
 
-	UKismetSystemLibrary::RetriggerableDelay(
-		GetWorld(),
-		StaminaDelayDuration,
-		FunctionInfo
-	);
+	UKismetSystemLibrary::RetriggerableDelay(GetWorld(), StaminaDelayDuration, FunctionInfo);
 
 	OnStaminaPercentUpdateDelegate.Broadcast(GetStatPercentage(EStat::Stamina, EStat::MaxStamina));
 }
