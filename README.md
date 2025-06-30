@@ -75,6 +75,9 @@ Enter the world of AshenVanguard, where ancient powers clash in brutal combat. A
 - **Fluid Controls**: Responsive third‑person movement with sprint, roll, and lock‑on mechanics.  
 - **Dynamic Combat Feedback**: Socket‑based collision detection with particle effects and camera shake integration.
 
+[![Watch the video](https://img.youtube.com/vi/M6XLHlR9rcY/maxresdefault.jpg)](https://youtu.be/M6XLHlR9rcY)
+### [Gameplay Video](https://youtu.be/M6XLHlR9rcY)
+
 ![Image](https://github.com/user-attachments/assets/06208df4-5d4e-4fb6-9cd8-676a376535fc)
 
 ![Image](https://github.com/user-attachments/assets/737c47b5-ca5b-4998-b47b-2cab14b338b2)
