@@ -10,29 +10,29 @@ The game uses interface-based design with component composition. Characters impl
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                      Game Systems                            │
+│                      Game Systems                           │
 ├─────────────────────────────────────────────────────────────┤
-│                                                               │
+│                                                             │
 │  ┌──────────────┐         ┌──────────────┐                  │
 │  │ MainCharacter│◄────────┤ BossCharacter│                  │
 │  │  (Player)    │  Combat │   (Enemy)    │                  │
 │  └──────┬───────┘         └──────┬───────┘                  │
-│         │                        │                           │
-│         │ Implements             │ Implements                │
-│         ▼                        ▼                           │
+│         │                        │                          │
+│         │ Implements             │ Implements               │
+│         ▼                        ▼                          │
 │  ┌──────────────┐         ┌──────────────┐                  │
 │  │  IMainPlayer │         │   IEnemy     │                  │
 │  │  Interface   │         │  Interface   │                  │
 │  └──────────────┘         └──────────────┘                  │
-│         │                        │                           │
-│         └────────┬───────────────┘                           │
-│                  │ Both Implement                            │
-│                  ▼                                            │
-│          ┌──────────────┐                                    │
-│          │   IFighter   │                                    │
-│          │  Interface   │                                    │
-│          └──────────────┘                                    │
-│                                                               │
+│         │                        │                          │
+│         └────────┬───────────────┘                          │
+│                  │ Both Implement                           │
+│                  ▼                                          │
+│          ┌──────────────┐                                   │
+│          │   IFighter   │                                   │
+│          │  Interface   │                                   │
+│          └──────────────┘                                   │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
