@@ -75,6 +75,8 @@ The `TraceComponent` handles weapon collision by performing box sweeps between s
 ### AI Behavior
 Boss enemies use a Behavior Tree with state-based logic. The `BTS_PlayerDistance` service continuously updates player distance. Tasks transition between states (Idle → Range → Charge/Melee) based on distance and attack patterns. `BTT_RageAttack` uses probability thresholds that adjust dynamically.
 
+<img width="1906" height="715" alt="Image" src="https://github.com/user-attachments/assets/d4a1e774-2e1e-47a4-bbec-4740501d1461" />
+
 ### Animation System
 - **PlayerAnimInstance**: Tracks speed, combat state, and movement direction for blend spaces
 - **BossAnimInstance**: Handles charging state for special attacks
@@ -92,6 +94,9 @@ Boss enemies use a Behavior Tree with state-based logic. The `BTS_PlayerDistance
 - Delegate system for loose coupling between systems
 - State machines for AI and combat flow
 - Socket-based collision for weapon tracing
+- Anim-Notifies for precise animation behavior
+
+<img width="1142" height="407" alt="Image" src="https://github.com/user-attachments/assets/062578f9-e633-45b8-98be-446049afc2bd" />
 
 **Dependencies:**
 ```cpp
