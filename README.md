@@ -58,9 +58,8 @@ BossCharacter
         ├── BTT_ChargeAttack
         └── BTT_RageAttack
 
-<img width="1512" height="838" alt="Image" src="https://github.com/user-attachments/assets/85ee1e70-86a4-467c-82a5-e5cf9fd4ef5f" />
-
 ```
+<img width="1512" height="838" alt="Image" src="https://github.com/user-attachments/assets/85ee1e70-86a4-467c-82a5-e5cf9fd4ef5f" />
 
 ## Core Systems
 
