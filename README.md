@@ -98,12 +98,16 @@ Boss enemies use a Behavior Tree with state-based logic. The `BTS_PlayerDistance
 
 <img width="1142" height="407" alt="Image" src="https://github.com/user-attachments/assets/062578f9-e633-45b8-98be-446049afc2bd" />
 
+---
+
 **Dependencies:**
 ```cpp
 PublicDependencyModuleNames.AddRange(new string[] { 
     "Core", "CoreUObject", "Engine", "InputCore", "AIModule" 
 });
 ```
+
+---
 
 [![Watch the video](https://img.youtube.com/vi/M6XLHlR9rcY/maxresdefault.jpg)](https://youtu.be/M6XLHlR9rcY)
 ### [Gameplay Video](https://youtu.be/M6XLHlR9rcY)
